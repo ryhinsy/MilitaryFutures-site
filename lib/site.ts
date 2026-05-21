@@ -1,7 +1,7 @@
 export const NAV_ITEMS = [
   { href: "/service-academies", label: "Academies" },
   { href: "/rotc", label: "ROTC" },
-  { href: "/enlistment-vs-commissioning", label: "Pathways" },
+  { href: "/enlistment-vs-commissioning", label: "Compare" },
   { href: "/national-guard", label: "Guard" },
   { href: "/congressional-nominations", label: "Nominations" },
   { href: "/wisconsin-representatives", label: "Wisconsin Reps" },
@@ -24,7 +24,7 @@ export const HOMEPAGE_ROUTES = [
   },
   {
     kicker: "Two starting points",
-    title: "Enlistment vs Commissioning",
+    title: "ROTC vs Academies vs Enlistment",
     text: "See the differences between enlisted careers, officer paths, timelines, and education requirements.",
     href: "/enlistment-vs-commissioning"
   },

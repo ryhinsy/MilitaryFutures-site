@@ -13,7 +13,7 @@ export default function WisconsinRepresentativesPage() {
         },
         {
           title: "Representative pages",
-          text: "Future content can link each office's academy nomination page, requirements, and stated deadline."
+          text: "Use each office's official academy nomination page to confirm requirements, submission method, interview process, and stated deadline."
         },
         {
           title: "Senator pages",

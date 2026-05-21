@@ -5,7 +5,7 @@ export default function ResourcesPage() {
     <PlaceholderPage
       eyebrow="Official links + references"
       title="Resources"
-      intro="A future home for official military, academy, ROTC, Guard, congressional, scholarship, testing, and student planning resources."
+      intro="A curated starting point for official military, academy, ROTC, Guard, congressional, scholarship, testing, and student planning resources."
       cards={[
         {
           title: "Official sources",

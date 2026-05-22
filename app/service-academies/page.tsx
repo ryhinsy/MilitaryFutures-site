@@ -4,6 +4,7 @@ import { ContentCard } from "@/components/ContentCard";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeader } from "@/components/SectionHeader";
 import { ComparisonTimeline, Timeline } from "@/components/Timeline";
+import type { ComparisonTimelineMilestone } from "@/components/Timeline";
 
 const academyLinks = [
   { label: "West Point admissions", href: "https://www.westpoint.edu/admissions" },
@@ -13,12 +14,13 @@ const academyLinks = [
   { label: "Merchant Marine Academy admissions", href: "https://www.usmma.edu/admissions" }
 ];
 
-const academyTimelineMilestones = [
+const academyTimelineMilestones: ComparisonTimelineMilestone[] = [
   {
     period: "Junior Year Winter/Spring",
     title: "Build the foundation",
     text: "Research academies, prepare for SAT/ACT testing, and begin fitness preparation.",
-    kind: "universal" as const
+    kind: "universal" as const,
+    timelines: ["Universal"]
   },
   {
     period: "Dec-Mar",
@@ -26,6 +28,7 @@ const academyTimelineMilestones = [
     title: "Summer seminar windows",
     text: "Optional academy summer programs usually open during winter and early spring. Verify exact dates annually.",
     kind: "academy" as const,
+    timelines: ["West Point", "Naval Academy", "Air Force Academy"],
     details: [
       "Air Force Academy: Summer Seminar usually Dec-Jan",
       "West Point: SLE applications usually Jan-Mar",
@@ -38,6 +41,7 @@ const academyTimelineMilestones = [
     title: "Pre-candidate doors open",
     text: "Several academies open the first application step during spring of junior year.",
     kind: "academy" as const,
+    timelines: ["West Point", "Naval Academy", "Air Force Academy"],
     details: [
       "West Point: Pre-Candidate Questionnaire usually opens February",
       "Air Force Academy: Pre-Candidate Questionnaire usually opens March",
@@ -48,46 +52,53 @@ const academyTimelineMilestones = [
     period: "Junior Year Spring",
     title: "Preliminary applications begin",
     text: "Students start preliminary applications, track summer seminar options, and keep test scores and activities organized.",
-    kind: "universal" as const
+    kind: "universal" as const,
+    timelines: ["Universal"]
   },
   {
     period: "Spring Junior Year",
     academy: "Merchant Marine Academy",
     title: "Application usually opens",
     text: "The Merchant Marine Academy application usually opens in spring of junior year.",
-    kind: "academy" as const
+    kind: "academy" as const,
+    timelines: ["Merchant Marine Academy"]
   },
   {
     period: "Junior Year Summer",
     title: "Pre-candidate phase",
     text: "Contact academy liaison officers, research nomination requirements, and prepare for candidate portals.",
-    kind: "universal" as const
+    kind: "universal" as const,
+    timelines: ["Universal"]
   },
   {
     period: "July",
     academy: "Air Force Academy",
     title: "Candidate Kit opens",
     text: "The Candidate Kit usually opens in July before senior year for eligible applicants.",
-    kind: "academy" as const
+    kind: "academy" as const,
+    timelines: ["Air Force Academy"]
   },
   {
     period: "Senior Summer/Early Fall",
     title: "Candidate phase begins",
     text: "Candidate portals open, full applications begin, and students request recommendations.",
-    kind: "universal" as const
+    kind: "universal" as const,
+    timelines: ["Universal"]
   },
   {
     period: "Around October",
     academy: "Coast Guard Academy",
     title: "Early Action deadline",
     text: "Early Action is usually due around October. The Coast Guard Academy does not require a congressional nomination.",
-    kind: "academy" as const
+    kind: "academy" as const,
+    timelines: ["Coast Guard Academy"]
   },
   {
     period: "Senior Year Fall",
     title: "Applications, nominations, and interviews",
     text: "Complete congressional nomination applications where required, essays, transcripts, interviews, and CFA preparation.",
     kind: "universal" as const,
+    timelines: ["Universal"],
     details: [
       "Most federal service academies require a nomination",
       "Coast Guard Academy does not require a congressional nomination",
@@ -98,7 +109,8 @@ const academyTimelineMilestones = [
     period: "Senior Year Fall/Winter",
     title: "CFA and DoDMERB",
     text: "Complete the Candidate Fitness Assessment and respond quickly to DoDMERB medical qualification follow-up.",
-    kind: "universal" as const
+    kind: "universal" as const,
+    timelines: ["Universal"]
   },
   {
     period: "Dec 31-Jan 31",
@@ -106,6 +118,7 @@ const academyTimelineMilestones = [
     title: "Final application deadlines",
     text: "Several final deadlines fall in winter. These dates are typical and must be verified annually.",
     kind: "academy" as const,
+    timelines: ["West Point", "Naval Academy", "Air Force Academy"],
     details: [
       "Air Force Academy: final application typically Dec 31",
       "West Point: final application typically Jan 31",
@@ -117,20 +130,23 @@ const academyTimelineMilestones = [
     academy: "Coast Guard Academy",
     title: "Decisions and regular admission",
     text: "Early Action decisions are usually in December, Regular Admission is usually around January, and Regular Admission decisions are usually in March.",
-    kind: "notification" as const
+    kind: "notification" as const,
+    timelines: ["Coast Guard Academy"]
   },
   {
     period: "Around February",
     academy: "Merchant Marine Academy",
     title: "Final application deadline",
     text: "The final application deadline is typically around February. A congressional nomination is required for most applicants.",
-    kind: "academy" as const
+    kind: "academy" as const,
+    timelines: ["Merchant Marine Academy"]
   },
   {
     period: "Senior Year Winter",
     title: "Final submissions",
     text: "Finish final submissions, nomination follow-up, medical follow-up, essays, recommendations, and portal updates.",
-    kind: "universal" as const
+    kind: "universal" as const,
+    timelines: ["Universal"]
   },
   {
     period: "Late Fall-Apr",
@@ -138,6 +154,7 @@ const academyTimelineMilestones = [
     title: "Appointments begin releasing",
     text: "Appointment windows vary by academy and cycle. Students should keep checking portals and official messages.",
     kind: "notification" as const,
+    timelines: ["West Point", "Naval Academy", "Air Force Academy", "Merchant Marine Academy"],
     details: [
       "Naval Academy: usually late fall-Apr",
       "West Point: usually Jan-Apr, often final notifications by May",
@@ -149,7 +166,8 @@ const academyTimelineMilestones = [
     period: "Senior Year Spring",
     title: "Accept, decline, and prepare",
     text: "Students receive appointment decisions, accept or decline offers, and prepare for reporting day or basic training.",
-    kind: "notification" as const
+    kind: "notification" as const,
+    timelines: ["Universal"]
   }
 ];
 

@@ -1,3 +1,7 @@
+"use client";
+
+import { useMemo, useState } from "react";
+
 type TimelineProps = {
   items: Array<{
     time: string;
@@ -21,16 +25,26 @@ export function Timeline({ items }: TimelineProps) {
 }
 
 type MilestoneKind = "universal" | "academy" | "notification";
+export type TimelineFilter =
+  | "Universal"
+  | "West Point"
+  | "Naval Academy"
+  | "Air Force Academy"
+  | "Coast Guard Academy"
+  | "Merchant Marine Academy";
+
+export type ComparisonTimelineMilestone = {
+  period: string;
+  title: string;
+  text: string;
+  kind: MilestoneKind;
+  academy?: string;
+  timelines: TimelineFilter[];
+  details?: string[];
+};
 
 type ComparisonTimelineProps = {
-  milestones: Array<{
-    period: string;
-    title: string;
-    text: string;
-    kind: MilestoneKind;
-    academy?: string;
-    details?: string[];
-  }>;
+  milestones: ComparisonTimelineMilestone[];
   phases?: string[];
 };
 
@@ -40,10 +54,40 @@ const milestoneLabels: Record<MilestoneKind, string> = {
   notification: "Notification / Appointment Window"
 };
 
+const timelineFilters: TimelineFilter[] = [
+  "Universal",
+  "West Point",
+  "Naval Academy",
+  "Air Force Academy",
+  "Coast Guard Academy",
+  "Merchant Marine Academy"
+];
+
 export function ComparisonTimeline({
   milestones,
   phases = ["Junior Year", "Senior Year", "Fall", "Winter", "Spring"]
 }: ComparisonTimelineProps) {
+  const [selectedTimelines, setSelectedTimelines] = useState<TimelineFilter[]>(["Universal"]);
+
+  const visibleMilestones = useMemo(
+    () =>
+      milestones.filter((milestone) =>
+        milestone.timelines.some((timeline) => selectedTimelines.includes(timeline))
+      ),
+    [milestones, selectedTimelines]
+  );
+
+  function toggleTimeline(timeline: TimelineFilter) {
+    setSelectedTimelines((current) => {
+      const isSelected = current.includes(timeline);
+      const next = isSelected
+        ? current.filter((selected) => selected !== timeline)
+        : [...current, timeline];
+
+      return next.length > 0 ? next : ["Universal"];
+    });
+  }
+
   return (
     <section className="timeline-feature" aria-labelledby="academy-timeline-title">
       <div className="container">
@@ -65,6 +109,23 @@ export function ComparisonTimeline({
             ))}
           </div>
         </div>
+        <div className="timeline-filter-bar" aria-label="Timeline filters">
+          {timelineFilters.map((timeline) => {
+            const isSelected = selectedTimelines.includes(timeline);
+
+            return (
+              <button
+                aria-pressed={isSelected}
+                className={isSelected ? "active" : ""}
+                key={timeline}
+                onClick={() => toggleTimeline(timeline)}
+                type="button"
+              >
+                {timeline}
+              </button>
+            );
+          })}
+        </div>
         <div className="roadmap-shell" aria-label="Service Academy application roadmap">
           <div className="roadmap-phases" aria-hidden="true">
             {phases.map((phase) => (
@@ -73,7 +134,7 @@ export function ComparisonTimeline({
           </div>
           <div className="roadmap-track">
             <div className="roadmap-line" aria-hidden="true" />
-            {milestones.map((milestone, index) => {
+            {visibleMilestones.map((milestone, index) => {
               const position = index % 2 === 0 ? "top" : "bottom";
 
               return (
@@ -91,6 +152,13 @@ export function ComparisonTimeline({
                     {milestone.academy ? (
                       <p className="milestone-academy">{milestone.academy}</p>
                     ) : null}
+                    <div className="timeline-badge-row" aria-label="Timeline labels">
+                      {milestone.timelines.map((timeline) => (
+                        <span className="timeline-badge" key={timeline}>
+                          {timeline}
+                        </span>
+                      ))}
+                    </div>
                     <h3>{milestone.title}</h3>
                     <p>{milestone.text}</p>
                     {milestone.details ? (

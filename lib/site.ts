@@ -3,7 +3,6 @@ export const NAV_ITEMS = [
   { href: "/rotc", label: "ROTC" },
   { href: "/enlistment-vs-commissioning", label: "Compare" },
   { href: "/national-guard", label: "Guard" },
-  { href: "/congressional-nominations", label: "Nominations" },
   { href: "/wisconsin-representatives", label: "Wisconsin Reps" },
   { href: "/student-checklist", label: "Checklist" },
   { href: "/resources", label: "Resources" }

@@ -29,7 +29,9 @@ type ComparisonTimelineProps = {
     text: string;
     kind: MilestoneKind;
     academy?: string;
+    details?: string[];
   }>;
+  phases?: string[];
 };
 
 const milestoneLabels: Record<MilestoneKind, string> = {
@@ -38,7 +40,10 @@ const milestoneLabels: Record<MilestoneKind, string> = {
   notification: "Notification / Appointment Window"
 };
 
-export function ComparisonTimeline({ milestones }: ComparisonTimelineProps) {
+export function ComparisonTimeline({
+  milestones,
+  phases = ["Junior Year", "Senior Year", "Fall", "Winter", "Spring"]
+}: ComparisonTimelineProps) {
   return (
     <section className="timeline-feature" aria-labelledby="academy-timeline-title">
       <div className="container">
@@ -60,21 +65,46 @@ export function ComparisonTimeline({ milestones }: ComparisonTimelineProps) {
             ))}
           </div>
         </div>
-        <div className="comparison-timeline">
-          {milestones.map((milestone) => (
-            <article
-              className={`milestone-card ${milestone.kind}`}
-              key={`${milestone.period}-${milestone.title}`}
-            >
-              <div className="milestone-meta">
-                <span>{milestone.period}</span>
-                <strong>{milestoneLabels[milestone.kind]}</strong>
-              </div>
-              {milestone.academy ? <p className="milestone-academy">{milestone.academy}</p> : null}
-              <h3>{milestone.title}</h3>
-              <p>{milestone.text}</p>
-            </article>
-          ))}
+        <div className="roadmap-shell" aria-label="Service Academy application roadmap">
+          <div className="roadmap-phases" aria-hidden="true">
+            {phases.map((phase) => (
+              <span key={phase}>{phase}</span>
+            ))}
+          </div>
+          <div className="roadmap-track">
+            <div className="roadmap-line" aria-hidden="true" />
+            {milestones.map((milestone, index) => {
+              const position = index % 2 === 0 ? "top" : "bottom";
+
+              return (
+                <article
+                  className={`roadmap-card ${milestone.kind} ${position}`}
+                  key={`${milestone.period}-${milestone.title}`}
+                >
+                  <div className="roadmap-connector" aria-hidden="true" />
+                  <div className="roadmap-node" aria-hidden="true" />
+                  <div className="roadmap-card-inner">
+                    <div className="roadmap-meta">
+                      <span>{milestone.period}</span>
+                      <strong>{milestoneLabels[milestone.kind]}</strong>
+                    </div>
+                    {milestone.academy ? (
+                      <p className="milestone-academy">{milestone.academy}</p>
+                    ) : null}
+                    <h3>{milestone.title}</h3>
+                    <p>{milestone.text}</p>
+                    {milestone.details ? (
+                      <ul>
+                        {milestone.details.map((detail) => (
+                          <li key={detail}>{detail}</li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </div>
+                </article>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

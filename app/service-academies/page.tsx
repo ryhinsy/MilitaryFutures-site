@@ -16,184 +16,139 @@ const academyLinks = [
 const academyTimelineMilestones = [
   {
     period: "Junior Year Winter/Spring",
-    title: "Research academies and prepare",
-    text: "Compare academy missions, prepare for SAT or ACT testing, and begin consistent fitness preparation.",
+    title: "Build the foundation",
+    text: "Research academies, prepare for SAT/ACT testing, and begin fitness preparation.",
     kind: "universal" as const
   },
   {
+    period: "Dec-Mar",
+    academy: "Summer programs",
+    title: "Summer seminar windows",
+    text: "Optional academy summer programs usually open during winter and early spring. Verify exact dates annually.",
+    kind: "academy" as const,
+    details: [
+      "Air Force Academy: Summer Seminar usually Dec-Jan",
+      "West Point: SLE applications usually Jan-Mar",
+      "Naval Academy: Summer Seminar usually Jan-Mar"
+    ]
+  },
+  {
+    period: "Feb-Apr",
+    academy: "Preliminary applications",
+    title: "Pre-candidate doors open",
+    text: "Several academies open the first application step during spring of junior year.",
+    kind: "academy" as const,
+    details: [
+      "West Point: Pre-Candidate Questionnaire usually opens February",
+      "Air Force Academy: Pre-Candidate Questionnaire usually opens March",
+      "Naval Academy: preliminary application usually opens April"
+    ]
+  },
+  {
     period: "Junior Year Spring",
-    title: "Summer seminar and preliminary applications begin",
-    text: "Students can begin watching for summer seminar applications, preliminary applications, and pre-candidate questionnaires.",
+    title: "Preliminary applications begin",
+    text: "Students start preliminary applications, track summer seminar options, and keep test scores and activities organized.",
     kind: "universal" as const
+  },
+  {
+    period: "Spring Junior Year",
+    academy: "Merchant Marine Academy",
+    title: "Application usually opens",
+    text: "The Merchant Marine Academy application usually opens in spring of junior year.",
+    kind: "academy" as const
   },
   {
     period: "Junior Year Summer",
     title: "Pre-candidate phase",
-    text: "Work on pre-candidate steps, contact academy liaison officers, and research congressional nomination requirements.",
+    text: "Contact academy liaison officers, research nomination requirements, and prepare for candidate portals.",
     kind: "universal" as const
   },
   {
-    period: "Senior Year Summer/Early Fall",
-    title: "Candidate portals open",
-    text: "Begin full applications, request recommendations, draft essays, and organize transcripts and test scores.",
-    kind: "universal" as const
-  },
-  {
-    period: "Senior Year Fall",
-    title: "Nomination and application push",
-    text: "Complete congressional nomination applications where required, interviews, essays, transcripts, and CFA preparation.",
-    kind: "universal" as const
-  },
-  {
-    period: "Senior Year Winter",
-    title: "Final submissions and follow-up",
-    text: "Finish final application requirements, respond to DoDMERB follow-up, and monitor nomination status.",
-    kind: "universal" as const
-  },
-  {
-    period: "Senior Year Spring",
-    title: "Final decisions",
-    text: "Appointment decisions arrive, students accept or decline offers, and appointees prepare for reporting day or basic training.",
-    kind: "notification" as const
-  },
-  {
-    period: "January-March",
-    academy: "West Point",
-    title: "SLE application window",
-    text: "The Summer Leaders Experience application is usually available during this window. Verify dates annually.",
-    kind: "academy" as const
-  },
-  {
-    period: "February of Junior Year",
-    academy: "West Point",
-    title: "Pre-Candidate Questionnaire opens",
-    text: "The PCQ usually opens in February of junior year and starts the academy admissions process.",
-    kind: "academy" as const
-  },
-  {
-    period: "Typically January 31",
-    academy: "West Point",
-    title: "Final application deadline",
-    text: "Final application materials are typically due by January 31. Students should verify the current cycle date.",
-    kind: "academy" as const
-  },
-  {
-    period: "January-April",
-    academy: "West Point",
-    title: "Appointments released",
-    text: "Appointments are usually released January through April, with final notifications often by May.",
-    kind: "notification" as const
-  },
-  {
-    period: "January-March",
-    academy: "Naval Academy",
-    title: "Summer Seminar application",
-    text: "Summer Seminar applications are usually open January through March. Verify annually on the official site.",
-    kind: "academy" as const
-  },
-  {
-    period: "April of Junior Year",
-    academy: "Naval Academy",
-    title: "Preliminary application opens",
-    text: "The preliminary application usually opens in April of junior year.",
-    kind: "academy" as const
-  },
-  {
-    period: "Typically January 31",
-    academy: "Naval Academy",
-    title: "Final application deadline",
-    text: "Final application materials are typically due by January 31. Students should verify the current cycle date.",
-    kind: "academy" as const
-  },
-  {
-    period: "Late Fall-April",
-    academy: "Naval Academy",
-    title: "Appointments released",
-    text: "Appointments are usually released from late fall through April.",
-    kind: "notification" as const
-  },
-  {
-    period: "December-January",
-    academy: "Air Force Academy",
-    title: "Summer Seminar application",
-    text: "Summer Seminar applications are usually open December through January.",
-    kind: "academy" as const
-  },
-  {
-    period: "March of Junior Year",
-    academy: "Air Force Academy",
-    title: "Pre-Candidate Questionnaire opens",
-    text: "The Pre-Candidate Questionnaire usually opens in March of junior year.",
-    kind: "academy" as const
-  },
-  {
-    period: "July Before Senior Year",
+    period: "July",
     academy: "Air Force Academy",
     title: "Candidate Kit opens",
     text: "The Candidate Kit usually opens in July before senior year for eligible applicants.",
     kind: "academy" as const
   },
   {
-    period: "Typically December 31",
-    academy: "Air Force Academy",
-    title: "Final application deadline",
-    text: "Final application materials are typically due by December 31. Verify annually.",
-    kind: "academy" as const
+    period: "Senior Summer/Early Fall",
+    title: "Candidate phase begins",
+    text: "Candidate portals open, full applications begin, and students request recommendations.",
+    kind: "universal" as const
   },
   {
-    period: "February-April",
-    academy: "Air Force Academy",
-    title: "Major appointment period",
-    text: "The major appointment period is usually February through April.",
-    kind: "notification" as const
-  },
-  {
-    period: "Usually Around October",
+    period: "Around October",
     academy: "Coast Guard Academy",
     title: "Early Action deadline",
     text: "Early Action is usually due around October. The Coast Guard Academy does not require a congressional nomination.",
     kind: "academy" as const
   },
   {
-    period: "Usually December",
+    period: "Senior Year Fall",
+    title: "Applications, nominations, and interviews",
+    text: "Complete congressional nomination applications where required, essays, transcripts, interviews, and CFA preparation.",
+    kind: "universal" as const,
+    details: [
+      "Most federal service academies require a nomination",
+      "Coast Guard Academy does not require a congressional nomination",
+      "Students should keep ROTC and college backup plans active"
+    ]
+  },
+  {
+    period: "Senior Year Fall/Winter",
+    title: "CFA and DoDMERB",
+    text: "Complete the Candidate Fitness Assessment and respond quickly to DoDMERB medical qualification follow-up.",
+    kind: "universal" as const
+  },
+  {
+    period: "Dec 31-Jan 31",
+    academy: "Major final deadlines",
+    title: "Final application deadlines",
+    text: "Several final deadlines fall in winter. These dates are typical and must be verified annually.",
+    kind: "academy" as const,
+    details: [
+      "Air Force Academy: final application typically Dec 31",
+      "West Point: final application typically Jan 31",
+      "Naval Academy: final application typically Jan 31"
+    ]
+  },
+  {
+    period: "Dec-Mar",
     academy: "Coast Guard Academy",
-    title: "Early Action decisions",
-    text: "Early Action decisions are usually released in December.",
+    title: "Decisions and regular admission",
+    text: "Early Action decisions are usually in December, Regular Admission is usually around January, and Regular Admission decisions are usually in March.",
     kind: "notification" as const
   },
   {
-    period: "Usually Around January",
-    academy: "Coast Guard Academy",
-    title: "Regular Admission deadline",
-    text: "Regular Admission is usually due around January. Verify the exact date each cycle.",
-    kind: "academy" as const
-  },
-  {
-    period: "Usually March",
-    academy: "Coast Guard Academy",
-    title: "Regular Admission decisions",
-    text: "Regular Admission decisions are usually released in March.",
-    kind: "notification" as const
-  },
-  {
-    period: "Spring of Junior Year",
-    academy: "Merchant Marine Academy",
-    title: "Application opens",
-    text: "The application usually opens in spring of junior year. A congressional nomination is required for most applicants.",
-    kind: "academy" as const
-  },
-  {
-    period: "Typically February",
+    period: "Around February",
     academy: "Merchant Marine Academy",
     title: "Final application deadline",
-    text: "Final application materials are typically due in February. Students should verify the current date.",
+    text: "The final application deadline is typically around February. A congressional nomination is required for most applicants.",
     kind: "academy" as const
   },
   {
-    period: "February-April",
-    academy: "Merchant Marine Academy",
-    title: "Appointments released",
-    text: "Appointments are usually released winter through spring, often February through April.",
+    period: "Senior Year Winter",
+    title: "Final submissions",
+    text: "Finish final submissions, nomination follow-up, medical follow-up, essays, recommendations, and portal updates.",
+    kind: "universal" as const
+  },
+  {
+    period: "Late Fall-Apr",
+    academy: "Appointment windows",
+    title: "Appointments begin releasing",
+    text: "Appointment windows vary by academy and cycle. Students should keep checking portals and official messages.",
+    kind: "notification" as const,
+    details: [
+      "Naval Academy: usually late fall-Apr",
+      "West Point: usually Jan-Apr, often final notifications by May",
+      "Air Force Academy: major appointment period usually Feb-Apr",
+      "Merchant Marine Academy: often Feb-Apr"
+    ]
+  },
+  {
+    period: "Senior Year Spring",
+    title: "Accept, decline, and prepare",
+    text: "Students receive appointment decisions, accept or decline offers, and prepare for reporting day or basic training.",
     kind: "notification" as const
   }
 ];

@@ -307,6 +307,41 @@ h3 {
   color: white;
 }
 
+.timeline-filter-bar button.west-point.active,
+.timeline-badge.west-point {
+  background: #5d6b2f;
+  border-color: #5d6b2f;
+  color: white;
+}
+
+.timeline-filter-bar button.naval-academy.active,
+.timeline-badge.naval-academy {
+  background: #1f4e79;
+  border-color: #1f4e79;
+  color: white;
+}
+
+.timeline-filter-bar button.air-force-academy.active,
+.timeline-badge.air-force-academy {
+  background: #5d7fa3;
+  border-color: #5d7fa3;
+  color: white;
+}
+
+.timeline-filter-bar button.coast-guard-academy.active,
+.timeline-badge.coast-guard-academy {
+  background: #b36b2c;
+  border-color: #b36b2c;
+  color: white;
+}
+
+.timeline-filter-bar button.merchant-marine-academy.active,
+.timeline-badge.merchant-marine-academy {
+  background: #7b5aa6;
+  border-color: #7b5aa6;
+  color: white;
+}
+
 .legend-pill {
   border: 1px solid transparent;
   border-radius: 999px;
@@ -404,7 +439,7 @@ h3 {
 }
 
 .roadmap-connector {
-  background: var(--sage);
+  background: var(--node-border, var(--sage));
   height: 74px;
   position: absolute;
   width: 2px;
@@ -421,8 +456,8 @@ h3 {
 
 .roadmap-node {
   align-items: center;
-  background: var(--surface);
-  border: 5px solid var(--sage);
+  background: var(--node-fill, var(--surface));
+  border: 5px solid var(--node-border, var(--sage));
   border-radius: 999px;
   box-shadow: 0 0 0 7px rgba(155, 171, 134, 0.2);
   display: flex;
@@ -435,26 +470,11 @@ h3 {
   z-index: 2;
 }
 
-.roadmap-card.academy .roadmap-connector,
-.roadmap-card.academy .roadmap-node {
-  border-color: var(--brass);
-  background-color: var(--surface);
-}
-
-.roadmap-card.academy .roadmap-connector {
-  background: var(--brass);
-}
-
 .roadmap-card.academy .roadmap-node {
   box-shadow: 0 0 0 7px rgba(199, 154, 59, 0.2);
 }
 
-.roadmap-card.notification .roadmap-connector {
-  background: #4d879f;
-}
-
 .roadmap-card.notification .roadmap-node {
-  border-color: #4d879f;
   box-shadow: 0 0 0 7px rgba(77, 135, 159, 0.2);
 }
 
@@ -477,6 +497,30 @@ h3 {
 
 .roadmap-card.notification .roadmap-card-inner {
   border-top-color: #4d879f;
+}
+
+.roadmap-card.west-point .roadmap-card-inner {
+  border-top-color: #5d6b2f;
+}
+
+.roadmap-card.naval-academy .roadmap-card-inner {
+  border-top-color: #1f4e79;
+}
+
+.roadmap-card.air-force-academy .roadmap-card-inner {
+  border-top-color: #5d7fa3;
+}
+
+.roadmap-card.coast-guard-academy .roadmap-card-inner {
+  border-top-color: #b36b2c;
+}
+
+.roadmap-card.merchant-marine-academy .roadmap-card-inner {
+  border-top-color: #7b5aa6;
+}
+
+.roadmap-card.grouped .roadmap-card-inner {
+  border-top-color: var(--olive-dark);
 }
 
 .roadmap-meta {

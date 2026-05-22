@@ -30,9 +30,18 @@ const academyTimelineMilestones: ComparisonTimelineMilestone[] = [
     kind: "academy" as const,
     timelines: ["West Point", "Naval Academy", "Air Force Academy"],
     details: [
-      "Air Force Academy: Summer Seminar usually Dec-Jan",
-      "West Point: SLE applications usually Jan-Mar",
-      "Naval Academy: Summer Seminar usually Jan-Mar"
+      {
+        timeline: "Air Force Academy",
+        text: "Air Force Academy: Summer Seminar usually Dec-Jan"
+      },
+      {
+        timeline: "West Point",
+        text: "West Point: SLE applications usually Jan-Mar"
+      },
+      {
+        timeline: "Naval Academy",
+        text: "Naval Academy: Summer Seminar usually Jan-Mar"
+      }
     ]
   },
   {
@@ -43,9 +52,18 @@ const academyTimelineMilestones: ComparisonTimelineMilestone[] = [
     kind: "academy" as const,
     timelines: ["West Point", "Naval Academy", "Air Force Academy"],
     details: [
-      "West Point: Pre-Candidate Questionnaire usually opens February",
-      "Air Force Academy: Pre-Candidate Questionnaire usually opens March",
-      "Naval Academy: preliminary application usually opens April"
+      {
+        timeline: "West Point",
+        text: "West Point: Pre-Candidate Questionnaire usually opens February"
+      },
+      {
+        timeline: "Air Force Academy",
+        text: "Air Force Academy: Pre-Candidate Questionnaire usually opens March"
+      },
+      {
+        timeline: "Naval Academy",
+        text: "Naval Academy: preliminary application usually opens April"
+      }
     ]
   },
   {
@@ -100,9 +118,15 @@ const academyTimelineMilestones: ComparisonTimelineMilestone[] = [
     kind: "universal" as const,
     timelines: ["Universal"],
     details: [
-      "Most federal service academies require a nomination",
-      "Coast Guard Academy does not require a congressional nomination",
-      "Students should keep ROTC and college backup plans active"
+      {
+        text: "Most federal service academies require a nomination"
+      },
+      {
+        text: "Coast Guard Academy does not require a congressional nomination"
+      },
+      {
+        text: "Students should keep ROTC and college backup plans active"
+      }
     ]
   },
   {
@@ -120,9 +144,18 @@ const academyTimelineMilestones: ComparisonTimelineMilestone[] = [
     kind: "academy" as const,
     timelines: ["West Point", "Naval Academy", "Air Force Academy"],
     details: [
-      "Air Force Academy: final application typically Dec 31",
-      "West Point: final application typically Jan 31",
-      "Naval Academy: final application typically Jan 31"
+      {
+        timeline: "Air Force Academy",
+        text: "Air Force Academy: final application typically Dec 31"
+      },
+      {
+        timeline: "West Point",
+        text: "West Point: final application typically Jan 31"
+      },
+      {
+        timeline: "Naval Academy",
+        text: "Naval Academy: final application typically Jan 31"
+      }
     ]
   },
   {
@@ -156,10 +189,22 @@ const academyTimelineMilestones: ComparisonTimelineMilestone[] = [
     kind: "notification" as const,
     timelines: ["West Point", "Naval Academy", "Air Force Academy", "Merchant Marine Academy"],
     details: [
-      "Naval Academy: usually late fall-Apr",
-      "West Point: usually Jan-Apr, often final notifications by May",
-      "Air Force Academy: major appointment period usually Feb-Apr",
-      "Merchant Marine Academy: often Feb-Apr"
+      {
+        timeline: "Naval Academy",
+        text: "Naval Academy: usually late fall-Apr"
+      },
+      {
+        timeline: "West Point",
+        text: "West Point: usually Jan-Apr, often final notifications by May"
+      },
+      {
+        timeline: "Air Force Academy",
+        text: "Air Force Academy: major appointment period usually Feb-Apr"
+      },
+      {
+        timeline: "Merchant Marine Academy",
+        text: "Merchant Marine Academy: often Feb-Apr"
+      }
     ]
   },
   {

@@ -190,7 +190,7 @@ export default function ServiceAcademiesPage() {
             </ContentCard>
             <ContentCard title="U.S. Representative" kicker="District source">
               Students should use their home address to confirm their
-              congressional district, then follow that representative's
+              congressional district, then follow that representative&apos;s
               nomination application instructions.
             </ContentCard>
             <ContentCard title="Other Sources" kicker="Eligibility varies">

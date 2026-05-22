@@ -237,6 +237,132 @@ h3 {
   margin-bottom: 8px;
 }
 
+.timeline-feature {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  padding: 46px 0;
+}
+
+.timeline-feature-header {
+  align-items: end;
+  display: grid;
+  gap: 22px;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.48fr);
+  margin-bottom: 26px;
+}
+
+.timeline-feature-header h2 {
+  max-width: 760px;
+}
+
+.timeline-feature-header p {
+  margin-top: 14px;
+  max-width: 780px;
+}
+
+.timeline-legend {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.legend-pill {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 900;
+  padding: 8px 10px;
+}
+
+.legend-pill.universal {
+  background: #e8f0dc;
+  border-color: #c6d5af;
+  color: var(--olive-dark);
+}
+
+.legend-pill.academy {
+  background: #fff3d8;
+  border-color: #e1bf72;
+  color: #6f4c08;
+}
+
+.legend-pill.notification {
+  background: var(--sky);
+  border-color: #bbd1dc;
+  color: #234458;
+}
+
+.comparison-timeline {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.milestone-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  border-top: 6px solid var(--sage);
+  display: grid;
+  gap: 10px;
+  min-height: 214px;
+  padding: 18px;
+}
+
+.milestone-card.academy {
+  border-top-color: var(--brass);
+}
+
+.milestone-card.notification {
+  border-top-color: #4d879f;
+}
+
+.milestone-meta {
+  align-items: flex-start;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.milestone-meta span {
+  color: var(--olive);
+  font-size: 0.82rem;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+.milestone-meta strong {
+  border-radius: 999px;
+  font-size: 0.68rem;
+  line-height: 1.2;
+  padding: 6px 8px;
+  text-align: right;
+}
+
+.milestone-card.universal .milestone-meta strong {
+  background: #e8f0dc;
+  color: var(--olive-dark);
+}
+
+.milestone-card.academy .milestone-meta strong {
+  background: #fff3d8;
+  color: #6f4c08;
+}
+
+.milestone-card.notification .milestone-meta strong {
+  background: var(--sky);
+  color: #234458;
+}
+
+.milestone-academy {
+  color: var(--brass);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .section {
   padding: 62px 0;
 }
@@ -601,6 +727,19 @@ section[id] {
     grid-template-columns: 1fr;
   }
 
+  .timeline-feature-header {
+    align-items: start;
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-legend {
+    justify-content: flex-start;
+  }
+
+  .comparison-timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .hero-visual {
     min-height: 340px;
   }
@@ -647,6 +786,18 @@ section[id] {
 
   .hero {
     padding-top: 46px;
+  }
+
+  .timeline-feature {
+    padding: 34px 0;
+  }
+
+  .comparison-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .milestone-card {
+    min-height: auto;
   }
 
   h1 {

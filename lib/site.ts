@@ -1,11 +1,10 @@
 export const NAV_ITEMS = [
   { href: "/service-academies", label: "Academies" },
   { href: "/rotc", label: "ROTC" },
-  { href: "/enlistment-vs-commissioning", label: "Compare" },
   { href: "/national-guard", label: "Guard" },
-  { href: "/wisconsin-representatives", label: "Wisconsin Reps" },
   { href: "/student-checklist", label: "Checklist" },
-  { href: "/resources", label: "Resources" }
+  { href: "/resources", label: "Resources" },
+  { href: "/enlistment-vs-commissioning", label: "Compare" }
 ];
 
 export const HOMEPAGE_ROUTES = [

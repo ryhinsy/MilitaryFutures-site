@@ -2,6 +2,7 @@ import { Checklist } from "@/components/Checklist";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { ContentCard } from "@/components/ContentCard";
 import { PageHero } from "@/components/PageHero";
+import { RepresentativeLookup } from "@/components/RepresentativeLookup";
 import { SectionHeader } from "@/components/SectionHeader";
 import { ComparisonTimeline, Timeline } from "@/components/Timeline";
 import type { ComparisonTimelineMilestone } from "@/components/Timeline";
@@ -429,6 +430,9 @@ export default function ServiceAcademiesPage() {
                 "Dress neatly, arrive early, and send any follow-up materials quickly"
               ]}
             />
+          </div>
+          <div className="spaced-top">
+            <RepresentativeLookup />
           </div>
         </div>
       </section>

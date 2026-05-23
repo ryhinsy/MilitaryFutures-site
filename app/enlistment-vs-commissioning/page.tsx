@@ -1,43 +1,54 @@
-import { Checklist } from "@/components/Checklist";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { ContentCard } from "@/components/ContentCard";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeader } from "@/components/SectionHeader";
-import { Timeline } from "@/components/Timeline";
 
 export default function EnlistmentVsCommissioningPage() {
   return (
     <>
-      <PageHero eyebrow="Compare pathways" title="ROTC vs Academies vs Enlistment">
-        Students can serve through several routes. The biggest early question is
-        whether they want to enter as an enlisted service member, train toward an
-        officer commission in college, or attend a Service Academy.
+      <PageHero eyebrow="Decision guide" title="Compare Military Pathways">
+        This section helps students and parents compare what daily life,
+        college, training, benefits, leadership, deployment possibility, and
+        service obligations can look like across common military pathways.
       </PageHero>
 
       <section className="section">
         <div className="container">
-          <SectionHeader title="Officer vs Enlisted, in Plain Language">
-            Both paths matter. Enlisted members become trained specialists,
-            operators, technicians, and team leaders. Officers are commissioned
-            leaders responsible for planning, management, decisions, and the
-            welfare of the people they lead.
+          <SectionHeader title="What Life Looks Like">
+            The best path depends on whether the student wants a full-time
+            military college, a civilian campus with officer training, immediate
+            job training, part-time service, or active duty life after training.
           </SectionHeader>
-          <div className="content-grid two">
-            <ContentCard title="Enlisted Path" kicker="Career specialist">
-              <ul>
-                <li>Can begin after high school with a qualifying contract.</li>
-                <li>Usually starts with basic training and job-specific school.</li>
-                <li>Often provides earlier hands-on technical experience.</li>
-                <li>Can later connect to college benefits or commissioning programs.</li>
-              </ul>
+          <div className="content-grid">
+            <ContentCard title="Service Academies" kicker="Officer pathway">
+              Daily life is structured around academics, military training,
+              fitness, inspections, leadership roles, and a full campus
+              community built around service.
             </ContentCard>
-            <ContentCard title="Officer Path" kicker="Commissioned leader">
-              <ul>
-                <li>Usually requires a college degree.</li>
-                <li>Can begin through an academy, ROTC, or officer candidate route.</li>
-                <li>Focuses on leadership, planning, accountability, and mission execution.</li>
-                <li>Often includes branch-specific training after commissioning.</li>
-              </ul>
+            <ContentCard title="ROTC" kicker="College + officer pathway">
+              Students attend a civilian college while adding ROTC classes,
+              labs, physical training, field training, and summer requirements.
+            </ContentCard>
+            <ContentCard title="Enlistment" kicker="Job training first">
+              Students enter a branch, complete initial training, learn a job
+              specialty, and begin serving in an enlisted role.
+            </ContentCard>
+            <ContentCard title="National Guard" kicker="State + federal">
+              Members usually serve part time while balancing school or work,
+              but can be activated for state emergencies or federal missions.
+            </ContentCard>
+            <ContentCard title="Air National Guard" kicker="Air-focused Guard">
+              Similar part-time model, often connected to aviation, cyber,
+              intelligence, maintenance, medical, security, and mission support
+              roles.
+            </ContentCard>
+            <ContentCard title="Reserves" kicker="Federal part-time">
+              Reserve members typically serve part time in a federal reserve
+              component and can be mobilized for training or operational needs.
+            </ContentCard>
+            <ContentCard title="Active Duty" kicker="Full-time service">
+              Active Duty means the military is the full-time job. Daily life
+              depends heavily on branch, job specialty, unit, and duty station.
             </ContentCard>
           </div>
         </div>
@@ -45,48 +56,78 @@ export default function EnlistmentVsCommissioningPage() {
 
       <section className="section alt">
         <div className="container">
-          <SectionHeader eyebrow="Side by side" title="Major Pathway Comparison" />
+          <SectionHeader eyebrow="Side by side" title="Student Experience Comparison" />
           <ComparisonTable
-            columns={["Service Academy", "ROTC", "Enlistment"]}
+            columns={["Academies", "ROTC", "Enlistment", "Guard / Reserve", "Active Duty"]}
             rows={[
               {
-                label: "Primary goal",
+                label: "Daily life",
                 values: [
-                  "Earn a degree at a federal academy and commission as an officer.",
-                  "Attend a civilian college while training to commission as an officer.",
-                  "Enter the military workforce and train for an enlisted specialty."
+                  "Highly structured military college environment.",
+                  "Civilian college schedule plus ROTC commitments.",
+                  "Full-time military training and job assignment after entry.",
+                  "Part-time service rhythm with school or civilian work.",
+                  "Full-time military job with unit routines, training, and duty assignments."
                 ]
               },
               {
                 label: "College experience",
                 values: [
-                  "Full-time military college environment with strict structure.",
-                  "Civilian campus experience with military classes, labs, and training.",
-                  "College may happen before, during, or after service depending on the plan."
+                  "Degree earned at a federal academy.",
+                  "Degree earned at a civilian college.",
+                  "College may happen before, during, or after service.",
+                  "College often happens alongside drill or after training.",
+                  "College may happen later using education benefits or off-duty study."
                 ]
               },
               {
-                label: "Cost and benefits",
+                label: "Training",
                 values: [
-                  "Education is funded, with a service commitment after graduation.",
-                  "Scholarships may cover tuition, fees, books, or living support depending on award.",
-                  "Pay, benefits, training, and education benefits vary by branch and component."
+                  "Four years of academy academics, military training, and summer programs.",
+                  "ROTC classes, labs, PT, field training, and summer training.",
+                  "Basic training plus job-specific school.",
+                  "Initial training plus regular drill, annual training, and possible mobilization.",
+                  "Initial training, job school, unit training, and recurring readiness requirements."
                 ]
               },
               {
-                label: "Application style",
+                label: "Pay / benefits",
                 values: [
-                  "Highly competitive college application plus nomination for most academies.",
-                  "College admission plus ROTC scholarship or campus enrollment process.",
-                  "Recruiter-guided process with testing, medical qualification, and contract review."
+                  "Education is funded with cadet or midshipman pay and later officer pay.",
+                  "Scholarship or stipend possibilities vary by branch and award.",
+                  "Military pay, benefits, job training, and education benefits may apply.",
+                  "Part-time pay, training benefits, and education benefits vary by component and state.",
+                  "Full-time pay, housing or allowances, health care, leave, retirement eligibility, and education benefits may apply."
                 ]
               },
               {
-                label: "Best for",
+                label: "Leadership",
                 values: [
-                  "Students seeking a structured academy environment and officer commission.",
-                  "Students wanting a civilian college campus with an officer pathway.",
-                  "Students ready for job training, earlier service, or a technical career start."
+                  "Designed to commission officers after graduation.",
+                  "Designed to commission officers after college.",
+                  "Leadership grows through enlisted rank, experience, and responsibility.",
+                  "Leadership can develop through enlisted or officer Guard/Reserve paths.",
+                  "Leadership depends on rank, job, time in service, and officer or enlisted path."
+                ]
+              },
+              {
+                label: "Deployment possibility",
+                values: [
+                  "After commissioning, deployment depends on branch, job, and world events.",
+                  "After commissioning, deployment depends on branch, job, and world events.",
+                  "Possible after training based on unit, job, and branch needs.",
+                  "Possible through state activation, federal mobilization, or deployment.",
+                  "Possible and often more central to full-time military readiness."
+                ]
+              },
+              {
+                label: "Service obligation",
+                values: [
+                  "Usually a required officer service commitment after graduation.",
+                  "Usually a service commitment after commissioning, especially with scholarships.",
+                  "Defined by enlistment contract and component.",
+                  "Defined by contract, component, unit, and any benefits used.",
+                  "Defined by contract, officer program, branch, and training pipeline."
                 ]
               }
             ]}
@@ -96,62 +137,32 @@ export default function EnlistmentVsCommissioningPage() {
 
       <section className="section">
         <div className="container">
-          <SectionHeader eyebrow="Best for" title="How to Match a Student to a Path" />
+          <SectionHeader eyebrow="Best fit" title="Match the Path to the Goal" />
           <div className="content-grid">
-            <ContentCard title="Academies may fit if">
-              The student wants a highly structured college experience, is
-              comfortable with intense competition, and wants officer leadership
-              immediately after graduation.
+            <ContentCard title="Wants a military college">
+              Start with Service Academies and senior military colleges, while
+              keeping ROTC backups active.
             </ContentCard>
-            <ContentCard title="ROTC may fit if">
-              The student wants a broader civilian college experience while
-              still preparing for military leadership, scholarships, and a
-              future commission.
+            <ContentCard title="Wants a traditional campus">
+              ROTC may fit well because students can attend a civilian college
+              while preparing for an officer commission.
             </ContentCard>
-            <ContentCard title="Enlistment may fit if">
-              The student wants to begin service sooner, learn a specific job,
-              gain technical skills, or use military benefits to support future
-              education.
+            <ContentCard title="Wants job training soon">
+              Enlistment may fit if the student wants hands-on training,
+              military experience, and benefits earlier.
             </ContentCard>
-          </div>
-        </div>
-      </section>
-
-      <section className="section alt">
-        <div className="container content-grid two">
-          <Checklist
-            title="Questions Before Choosing"
-            items={[
-              "Do I want to be an officer, enlisted member, or am I still deciding?",
-              "Do I want a traditional college campus experience?",
-              "Am I ready for a full-time military college environment?",
-              "Which branch missions interest me most?",
-              "What job fields or majors fit my strengths?",
-              "What service commitment am I willing to make?",
-              "What backup plan keeps me moving if my first choice does not work?"
-            ]}
-          />
-          <div>
-            <h2 className="stack-title">Decision Timeline</h2>
-            <Timeline
-              items={[
-                {
-                  time: "Sophomore year",
-                  title: "Explore broadly",
-                  text: "Learn the branches, talk with trusted adults, and avoid locking onto one path too early."
-                },
-                {
-                  time: "Junior year",
-                  title: "Compare requirements",
-                  text: "Map academy, ROTC, enlistment, testing, fitness, and college deadlines on one calendar."
-                },
-                {
-                  time: "Senior year",
-                  title: "Keep options alive",
-                  text: "Apply, interview, compare offers or contracts, and read every service commitment carefully."
-                }
-              ]}
-            />
+            <ContentCard title="Wants to stay local">
+              National Guard, Air National Guard, or Reserves may fit students
+              balancing school, work, and service.
+            </ContentCard>
+            <ContentCard title="Wants full-time military life">
+              Active Duty may fit students who want the military to be their
+              primary full-time job after training.
+            </ContentCard>
+            <ContentCard title="Still deciding">
+              Compare timelines, contracts, branch missions, college goals, and
+              family needs before signing or committing.
+            </ContentCard>
           </div>
         </div>
       </section>

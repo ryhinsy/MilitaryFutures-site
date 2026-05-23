@@ -918,6 +918,15 @@ section[id] {
   margin-bottom: 8px;
 }
 
+.lookup-helper,
+.lookup-message {
+  font-size: 0.92rem;
+}
+
+.lookup-helper {
+  margin-top: 12px;
+}
+
 .lookup-controls {
   display: grid;
   gap: 12px;
@@ -942,6 +951,20 @@ section[id] {
   padding: 9px 11px;
 }
 
+.lookup-controls input[aria-invalid="true"] {
+  border-color: #b36b2c;
+  box-shadow: 0 0 0 3px rgba(179, 107, 44, 0.16);
+}
+
+.lookup-message {
+  background: var(--surface-muted);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--olive-dark);
+  grid-column: 1 / -1;
+  padding: 12px;
+}
+
 .lookup-actions {
   display: flex;
   flex-wrap: wrap;
@@ -949,16 +972,27 @@ section[id] {
   grid-column: 1 / -1;
 }
 
-.lookup-actions a {
+.lookup-actions button {
   background: var(--olive);
+  border: 0;
   border-radius: 8px;
   color: white;
+  cursor: pointer;
+  font: inherit;
   font-weight: 850;
+  min-height: 44px;
   padding: 11px 13px;
 }
 
-.lookup-actions a:last-child {
+.lookup-actions button:last-child {
   background: var(--olive-dark);
+}
+
+.lookup-actions button:hover,
+.lookup-actions button:focus-visible {
+  box-shadow: var(--shadow);
+  outline: none;
+  transform: translateY(-1px);
 }
 
 .spaced-top {
@@ -1187,6 +1221,11 @@ section[id] {
   }
 
   .button {
+    width: 100%;
+  }
+
+  .lookup-actions,
+  .lookup-actions button {
     width: 100%;
   }
 

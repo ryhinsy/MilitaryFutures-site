@@ -216,15 +216,11 @@ export function ComparisonTimeline({
                   style={nodeStyle}
                 >
                   <div className="roadmap-connector" aria-hidden="true" />
-                  <div className="roadmap-node" aria-hidden="true" />
+                  <div className="roadmap-node">{milestone.period}</div>
                   <div className="roadmap-card-inner">
-                    <div className="roadmap-meta">
-                      <span>{milestone.period}</span>
-                      <strong>{milestoneLabels[milestone.kind]}</strong>
-                    </div>
-                    {milestone.academy ? (
-                      <p className="milestone-academy">{milestone.academy}</p>
-                    ) : null}
+                    <span className="roadmap-kind">{milestoneLabels[milestone.kind]}</span>
+                    <h3>{milestone.academy ?? "Universal"}</h3>
+                    <p className="roadmap-subtitle">{milestone.title}</p>
                     <div className="timeline-badge-row" aria-label="Timeline labels">
                       {milestone.visibleTimelines.map((timeline) => (
                         <span
@@ -235,7 +231,6 @@ export function ComparisonTimeline({
                         </span>
                       ))}
                     </div>
-                    <h3>{milestone.title}</h3>
                     <p>{milestone.text}</p>
                     {milestone.visibleDetails ? (
                       <ul>

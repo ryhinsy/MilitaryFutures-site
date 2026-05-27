@@ -60,30 +60,6 @@ export default function RotcPage() {
           </div>
         </div>
       </section>
-
-      <section className="section alt">
-        <div className="container">
-          <SectionHeader eyebrow="Wisconsin examples" title="Examples to Verify">
-            These are examples for Wisconsin students to research, not a
-            complete or guaranteed list. Always verify current availability with
-            the official ROTC program finders and the campus ROTC office.
-          </SectionHeader>
-          <div className="content-grid">
-            <ContentCard title="University of Wisconsin-Madison">
-              Students commonly research Army, Navy/Marine, and Air Force ROTC
-              options connected to Madison-area programs.
-            </ContentCard>
-            <ContentCard title="Marquette University">
-              Students in Milwaukee may research ROTC options connected to
-              Marquette and nearby cross-town arrangements.
-            </ContentCard>
-            <ContentCard title="University of Wisconsin-Milwaukee">
-              Students should check whether their intended branch is hosted
-              directly or available through a nearby partner school.
-            </ContentCard>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

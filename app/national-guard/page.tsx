@@ -83,7 +83,7 @@ export default function NationalGuardPage() {
         <div className="container content-grid two">
           <ContentCard title="Best For" kicker="Student fit">
             <ul>
-              <li>Students who want to serve while staying connected to Wisconsin.</li>
+              <li>Students who want to serve while staying connected to their state.</li>
               <li>Students interested in part-time service with military job training.</li>
               <li>Students who want to combine college, work, and service.</li>
               <li>Students who understand that activation can interrupt normal plans.</li>
@@ -92,7 +92,7 @@ export default function NationalGuardPage() {
           <Checklist
             title="Questions for a Guard Recruiter"
             items={[
-              "What specific job openings are available in Wisconsin units?",
+              "What specific job openings are available in units near my home or school?",
               "Where is the unit located, and how far is drill from home or college?",
               "How long are basic training and job training for this role?",
               "What education benefits apply, and what are the eligibility rules?",

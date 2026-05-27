@@ -389,10 +389,10 @@ export default function ServiceAcademiesPage() {
             piece of the admissions process for the academies that use it.
           </SectionHeader>
           <div className="content-grid">
-            <ContentCard title="Wisconsin Senators" kicker="Statewide sources">
-              Wisconsin students should review the official academy nomination
-              instructions for Senator Tammy Baldwin and Senator Ron Johnson
-              each application cycle.
+            <ContentCard title="Your U.S. Senators" kicker="Statewide sources">
+              Students should review the official academy nomination
+              instructions for both senators from their home state each
+              application cycle.
             </ContentCard>
             <ContentCard title="U.S. Representative" kicker="District source">
               Students should use their home address to confirm their

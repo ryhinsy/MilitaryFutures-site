@@ -57,7 +57,7 @@ const states = [
 
 export function RepresentativeLookup() {
   const [zip, setZip] = useState("");
-  const [state, setState] = useState("WI");
+  const [state, setState] = useState("");
   const [message, setMessage] = useState("");
 
   const cleanZip = useMemo(() => zip.replace(/\D/g, "").slice(0, 5), [zip]);
@@ -66,7 +66,9 @@ export function RepresentativeLookup() {
     ? `https://www.house.gov/htbin/findrep?ZIP=${cleanZip}`
     : "https://www.house.gov/representatives/find-your-representative";
 
-  const senateUrl = `https://www.senate.gov/states/${state}/intro.htm`;
+  const senateUrl = state
+    ? `https://www.senate.gov/states/${state}/intro.htm`
+    : "https://www.senate.gov/states/statesmap.htm";
 
   function handleZipChange(value: string) {
     setZip(value.replace(/\D/g, "").slice(0, 5));
@@ -92,6 +94,11 @@ export function RepresentativeLookup() {
   }
 
   function findSenators() {
+    if (!state) {
+      setMessage("Select a state first, then use the official Senate page to confirm both senators.");
+      return;
+    }
+
     setMessage("Opening the official U.S. Senate state page for the selected state.");
     openOfficialLookup(senateUrl);
   }
@@ -101,13 +108,9 @@ export function RepresentativeLookup() {
       <div>
         <h3>Find Your Representatives</h3>
         <p>
-          Use the student&apos;s home address or ZIP code to confirm the correct
-          House district. Senate pages are organized by state.
-        </p>
-        <p className="lookup-helper">
           Use the student&apos;s home address because congressional districts are
-          based on residence. Official tools may ask for a full address because
-          ZIP codes can cross district lines.
+          based on residence. ZIP codes can cross district lines, so official
+          tools may ask for a full address.
         </p>
       </div>
       <div className="lookup-controls">
@@ -127,6 +130,7 @@ export function RepresentativeLookup() {
         <label>
           State
           <select onChange={(event) => setState(event.target.value)} value={state}>
+            <option value="">Select a state</option>
             {states.map(([abbr, name]) => (
               <option key={abbr} value={abbr}>
                 {name}
@@ -139,12 +143,7 @@ export function RepresentativeLookup() {
         <p className="lookup-message" id="representative-lookup-message" role="status">
           {message}
         </p>
-      ) : (
-        <p className="lookup-message" id="representative-lookup-message">
-          Enter a 5-digit ZIP for the House lookup, then choose the student&apos;s
-          state for the Senate lookup.
-        </p>
-      )}
+      ) : null}
       <div className="lookup-actions">
         <button onClick={findHouseRepresentative} type="button">
           Find My House Representative

@@ -13,8 +13,7 @@ This project uses Next.js with the App Router because it is a strong fit for an 
 - ROTC
 - Enlistment vs Commissioning
 - National Guard
-- Congressional Nominations, now nested within the Service Academies guide
-- Wisconsin Representatives
+- Congressional Nominations, nested within the Service Academies guide
 - Student Checklist
 - Resources
 
@@ -30,7 +29,6 @@ app/
   enlistment-vs-commissioning/page.tsx
   national-guard/page.tsx
   congressional-nominations/page.tsx  # redirects into the Academies nominations section
-  wisconsin-representatives/page.tsx
   student-checklist/page.tsx
   resources/page.tsx
 components/

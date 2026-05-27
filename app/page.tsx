@@ -69,7 +69,7 @@ export default function Home() {
             <h2>Explore the main pathways</h2>
             <p>
               Each section starts simple, then can grow into deeper explainers,
-              timelines, FAQs, and Wisconsin-specific guidance.
+              timelines, FAQs, and state-specific guidance.
             </p>
           </div>
           <div className="route-grid">

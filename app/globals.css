@@ -77,15 +77,12 @@ ol {
   font-weight: 800;
 }
 
-.brand-mark {
-  align-items: center;
-  background: var(--olive);
-  border-radius: 8px;
-  color: white;
-  display: inline-flex;
-  height: 42px;
-  justify-content: center;
-  width: 42px;
+.brand-logo {
+  display: block;
+  flex: 0 0 auto;
+  height: 48px;
+  object-fit: contain;
+  width: 72px;
 }
 
 .brand-name {
@@ -1040,6 +1037,19 @@ section[id] {
   justify-content: space-between;
 }
 
+.footer-brand {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+}
+
+.footer-logo {
+  flex: 0 0 auto;
+  height: 36px;
+  object-fit: contain;
+  width: 54px;
+}
+
 .footer-grid p {
   color: rgba(255, 255, 255, 0.72);
 }
@@ -1122,6 +1132,11 @@ section[id] {
     border: 1px solid var(--line);
     border-radius: 8px;
     text-align: center;
+  }
+
+  .brand-logo {
+    height: 40px;
+    width: 60px;
   }
 
   .subnav {

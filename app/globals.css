@@ -702,7 +702,8 @@ h3 {
 }
 
 .subnav a:hover,
-.subnav a:focus-visible {
+.subnav a:focus-visible,
+.subnav a.active {
   background: var(--olive);
   color: white;
   outline: none;
@@ -907,70 +908,63 @@ section[id] {
     linear-gradient(135deg, rgba(219, 231, 238, 0.9), rgba(238, 241, 231, 0.95));
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  min-height: 430px;
   overflow: hidden;
-  position: relative;
 }
 
-.map-shape {
-  background: rgba(61, 81, 49, 0.16);
-  border: 2px solid rgba(61, 81, 49, 0.24);
-  clip-path: polygon(
-    7% 39%,
-    17% 27%,
-    33% 23%,
-    45% 30%,
-    58% 26%,
-    72% 29%,
-    88% 36%,
-    94% 48%,
-    84% 58%,
-    70% 61%,
-    57% 70%,
-    43% 68%,
-    31% 62%,
-    17% 60%,
-    8% 51%
-  );
-  inset: 38px 28px;
-  position: absolute;
+.academy-map-svg {
+  display: block;
+  height: auto;
+  min-width: 760px;
+  width: 100%;
 }
 
-.map-pin {
-  display: grid;
-  gap: 2px;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  width: 150px;
+.map-us-shape {
+  fill: rgba(61, 81, 49, 0.16);
+  stroke: rgba(61, 81, 49, 0.34);
+  stroke-linejoin: round;
+  stroke-width: 4;
 }
 
-.map-pin span {
-  background: var(--brass);
-  border: 4px solid white;
-  border-radius: 999px;
-  box-shadow: 0 6px 16px rgba(38, 53, 31, 0.24);
-  height: 18px;
-  width: 18px;
+.map-us-shape.secondary {
+  fill: rgba(199, 154, 59, 0.16);
 }
 
-.map-pin strong,
-.map-pin small {
-  background: rgba(255, 255, 255, 0.94);
-  border: 1px solid var(--line);
-  border-radius: 7px;
-  justify-self: start;
-  padding: 3px 6px;
+.map-callout-line {
+  stroke: rgba(38, 53, 31, 0.45);
+  stroke-width: 2;
 }
 
-.map-pin strong {
-  color: var(--olive-dark);
-  font-size: 0.78rem;
+.map-label-box {
+  fill: rgba(255, 255, 255, 0.95);
+  stroke: var(--line);
 }
 
-.map-pin small {
-  color: var(--ink-muted);
-  font-size: 0.72rem;
+.map-label-title {
+  fill: var(--olive-dark);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.map-label-location {
+  fill: var(--ink-muted);
+  font-size: 12px;
   font-weight: 800;
+}
+
+.map-marker {
+  fill: var(--brass);
+  stroke: white;
+  stroke-width: 5;
+}
+
+.map-marker-text {
+  fill: white;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.map-note {
+  font-size: 0.92rem;
 }
 
 .map-list {
@@ -1246,11 +1240,7 @@ section[id] {
   }
 
   .map-canvas {
-    min-height: 640px;
-  }
-
-  .map-pin {
-    width: 128px;
+    overflow-x: auto;
   }
 
   .hero-visual-panel {

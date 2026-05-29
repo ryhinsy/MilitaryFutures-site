@@ -10,10 +10,10 @@ export function Header() {
           <Image
             alt="Military Futures"
             className="brand-logo"
-            height={48}
+            height={96}
             priority
             src="/military-futures-logo.png"
-            width={72}
+            width={144}
           />
         </Link>
         <nav className="nav-links" aria-label="Main navigation">

@@ -85,17 +85,6 @@ ol {
   width: 72px;
 }
 
-.brand-name {
-  display: grid;
-  line-height: 1.1;
-}
-
-.brand-name span:last-child {
-  color: var(--ink-muted);
-  font-size: 0.78rem;
-  font-weight: 600;
-}
-
 .nav-links {
   align-items: center;
   display: flex;
@@ -901,97 +890,6 @@ section[id] {
   outline: none;
 }
 
-.lookup-tool {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  display: grid;
-  gap: 18px;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.7fr);
-  padding: 24px;
-}
-
-.lookup-tool h3 {
-  margin-bottom: 8px;
-}
-
-.lookup-helper,
-.lookup-message {
-  font-size: 0.92rem;
-}
-
-.lookup-helper {
-  margin-top: 12px;
-}
-
-.lookup-controls {
-  display: grid;
-  gap: 12px;
-}
-
-.lookup-controls label {
-  color: var(--olive-dark);
-  display: grid;
-  font-size: 0.86rem;
-  font-weight: 900;
-  gap: 6px;
-}
-
-.lookup-controls input,
-.lookup-controls select {
-  background: var(--background);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  color: var(--ink);
-  font: inherit;
-  min-height: 44px;
-  padding: 9px 11px;
-}
-
-.lookup-controls input[aria-invalid="true"] {
-  border-color: #b36b2c;
-  box-shadow: 0 0 0 3px rgba(179, 107, 44, 0.16);
-}
-
-.lookup-message {
-  background: var(--surface-muted);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  color: var(--olive-dark);
-  grid-column: 1 / -1;
-  padding: 12px;
-}
-
-.lookup-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  grid-column: 1 / -1;
-}
-
-.lookup-actions button {
-  background: var(--olive);
-  border: 0;
-  border-radius: 8px;
-  color: white;
-  cursor: pointer;
-  font: inherit;
-  font-weight: 850;
-  min-height: 44px;
-  padding: 11px 13px;
-}
-
-.lookup-actions button:last-child {
-  background: var(--olive-dark);
-}
-
-.lookup-actions button:hover,
-.lookup-actions button:focus-visible {
-  box-shadow: var(--shadow);
-  outline: none;
-  transform: translateY(-1px);
-}
-
 .spaced-top {
   margin-top: 18px;
 }
@@ -1105,14 +1003,9 @@ section[id] {
   }
 
   .callout .container,
-  .footer-grid,
-  .lookup-tool {
+  .footer-grid {
     align-items: flex-start;
     flex-direction: column;
-  }
-
-  .lookup-tool {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -1236,11 +1129,6 @@ section[id] {
   }
 
   .button {
-    width: 100%;
-  }
-
-  .lookup-actions,
-  .lookup-actions button {
     width: 100%;
   }
 

@@ -12,7 +12,7 @@ export default function EnlistmentVsCommissioningPage() {
         service obligations can look like across common military pathways.
       </PageHero>
 
-      <section className="section">
+      <section className="section" id="enlistment">
         <div className="container">
           <SectionHeader title="What Life Looks Like">
             The best path depends on whether the student wants a full-time

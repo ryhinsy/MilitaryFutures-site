@@ -2,7 +2,6 @@ import { Checklist } from "@/components/Checklist";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { ContentCard } from "@/components/ContentCard";
 import { PageHero } from "@/components/PageHero";
-import { RepresentativeLookup } from "@/components/RepresentativeLookup";
 import { SectionHeader } from "@/components/SectionHeader";
 import { ComparisonTimeline, Timeline } from "@/components/Timeline";
 import type { ComparisonTimelineMilestone } from "@/components/Timeline";
@@ -431,8 +430,21 @@ export default function ServiceAcademiesPage() {
               ]}
             />
           </div>
-          <div className="spaced-top">
-            <RepresentativeLookup />
+          <div className="link-panel spaced-top" aria-label="Official nomination lookup links">
+            <a
+              href="https://www.house.gov/representatives/find-your-representative"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              U.S. House representative lookup
+            </a>
+            <a
+              href="https://www.senate.gov/states/statesmap.htm"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              U.S. Senate state lookup
+            </a>
           </div>
         </div>
       </section>

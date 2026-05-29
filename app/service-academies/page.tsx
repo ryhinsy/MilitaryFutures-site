@@ -1,3 +1,4 @@
+import { AcademyMap } from "@/components/AcademyMap";
 import { Checklist } from "@/components/Checklist";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { ContentCard } from "@/components/ContentCard";
@@ -12,6 +13,49 @@ const academyLinks = [
   { label: "Air Force Academy admissions", href: "https://www.academyadmissions.com/" },
   { label: "Coast Guard Academy admissions", href: "https://uscga.edu/admissions/" },
   { label: "Merchant Marine Academy admissions", href: "https://www.usmma.edu/admissions" }
+];
+
+const academyDetails = [
+  {
+    name: "West Point",
+    formalName: "U.S. Military Academy",
+    location: "West Point, New York",
+    commitment:
+      "Most graduates commission as Army officers after four years and serve a required active duty and reserve obligation.",
+    source: "https://www.westpoint.edu/admissions"
+  },
+  {
+    name: "Naval Academy",
+    formalName: "U.S. Naval Academy",
+    location: "Annapolis, Maryland",
+    commitment:
+      "Most graduates commission as Navy ensigns or Marine Corps second lieutenants after four years and serve a required obligation.",
+    source: "https://www.usna.edu/Admissions/"
+  },
+  {
+    name: "Air Force Academy",
+    formalName: "U.S. Air Force Academy",
+    location: "Colorado Springs, Colorado",
+    commitment:
+      "Most graduates commission as Air Force or Space Force officers after four years and serve a required obligation.",
+    source: "https://www.academyadmissions.com/"
+  },
+  {
+    name: "Coast Guard Academy",
+    formalName: "U.S. Coast Guard Academy",
+    location: "New London, Connecticut",
+    commitment:
+      "Most graduates commission as Coast Guard ensigns after four years and serve a required obligation.",
+    source: "https://uscga.edu/admissions/"
+  },
+  {
+    name: "Merchant Marine Academy",
+    formalName: "U.S. Merchant Marine Academy",
+    location: "Kings Point, New York",
+    commitment:
+      "Graduates have maritime and service obligation options that should be reviewed carefully with official academy sources.",
+    source: "https://www.usmma.edu/admissions"
+  }
 ];
 
 const academyTimelineMilestones: ComparisonTimelineMilestone[] = [
@@ -311,6 +355,78 @@ export default function ServiceAcademiesPage() {
               }
             ]}
           />
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <SectionHeader eyebrow="Cost + commitment" title="Academy Cost, Location, and Officer Pay">
+            Service academies are generally tuition-funded in exchange for a
+            service obligation, and most graduates commission after four years
+            as officers. Details can change, so students should verify current
+            cost, benefits, and obligation information with each academy.
+          </SectionHeader>
+          <div className="content-grid">
+            {academyDetails.map((academy) => (
+              <ContentCard title={academy.name} kicker={academy.formalName} key={academy.name}>
+                <ul>
+                  <li>
+                    <strong>Location:</strong> {academy.location}
+                  </li>
+                  <li>
+                    <strong>Estimated cost:</strong> Tuition, room, board, and
+                    related academy costs are generally funded, with cadets or
+                    midshipmen receiving pay or allowances while enrolled.
+                  </li>
+                  <li>
+                    <strong>Commissioning:</strong> {academy.commitment}
+                  </li>
+                  <li>
+                    <strong>Starting officer pay:</strong> A newly commissioned
+                    O-1 basic pay estimate is about $4,150/month in 2026 before
+                    housing, food, tax, location, and specialty factors.
+                  </li>
+                </ul>
+                <a className="text-link" href={academy.source} rel="noopener noreferrer" target="_blank">
+                  Verify academy details
+                </a>
+              </ContentCard>
+            ))}
+          </div>
+          <div className="note-band spaced-top">
+            <strong>Pay estimate note</strong>
+            <p>
+              Officer pay changes by year and includes more than basic pay.
+              Review official DFAS pay tables and the DoD Regular Military
+              Compensation calculator before making financial assumptions.
+            </p>
+          </div>
+          <div className="link-panel spaced-top" aria-label="Official military pay links">
+            <a
+              href="https://www.dfas.mil/Pressroom/Article/4391719/2026-military-pay-tables-on-dfas-website/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              DFAS military pay tables
+            </a>
+            <a
+              href="https://militarypay.defense.gov/calculators/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              DoD compensation calculators
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="section alt">
+        <div className="container">
+          <SectionHeader eyebrow="Map" title="Where the Academies Are Located">
+            This static map-style graphic avoids third-party map APIs while
+            giving students a quick sense of where each academy is located.
+          </SectionHeader>
+          <AcademyMap />
         </div>
       </section>
 

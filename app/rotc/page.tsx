@@ -184,6 +184,47 @@ export default function RotcPage() {
           </ContentCard>
         </div>
       </section>
+
+      <section className="section">
+        <div className="container">
+          <SectionHeader eyebrow="Costs" title="What ROTC May Cost">
+            ROTC costs and benefits vary by branch, scholarship type, school,
+            tuition rules, room and board policies, fees, and whether a student
+            receives a national or campus-based scholarship. Students should
+            verify details with official ROTC sources and the college financial
+            aid office.
+          </SectionHeader>
+          <div className="content-grid">
+            <ContentCard title="With a National Scholarship" kicker="Competitive award">
+              Scholarships may cover tuition and certain required fees, and may
+              include book support or a stipend depending on branch rules.
+              Housing and meal coverage varies by branch, school, and local
+              policy, so families should compare the official award with the
+              college financial aid package.
+            </ContentCard>
+            <ContentCard title="Without a Scholarship" kicker="Enroll first">
+              Students can often join ROTC without a national scholarship after
+              enrolling in college. They may still pay normal tuition, fees,
+              housing, meals, books, and personal costs unless another aid source
+              covers them.
+            </ContentCard>
+            <ContentCard title="Campus-Based Scholarships" kicker="After joining">
+              Some ROTC units can nominate or award campus-based scholarships to
+              enrolled students. Availability depends on branch needs, budget,
+              student performance, eligibility, and the local program.
+            </ContentCard>
+          </div>
+          <div className="note-band spaced-top">
+            <strong>Questions to ask before choosing a college</strong>
+            <p>
+              Ask what the scholarship covers, what it does not cover, whether
+              room and board are included or separate, how stipends work, how
+              book support is paid, and how accepting an award changes service
+              obligation.
+            </p>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

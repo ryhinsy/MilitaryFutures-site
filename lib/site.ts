@@ -4,7 +4,6 @@ export const NAV_ITEMS = [
   { href: "/national-guard", label: "Guard" },
   { href: "/enlistment-vs-commissioning#enlistment", label: "Enlisting" },
   { href: "/student-checklist", label: "Checklist" },
-  { href: "/resources", label: "Resources" },
   { href: "/enlistment-vs-commissioning", label: "Compare" }
 ];
 

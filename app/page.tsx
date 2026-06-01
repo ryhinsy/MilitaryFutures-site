@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FindYourPathQuiz } from "@/components/FindYourPathQuiz";
 import { InfoCard } from "@/components/InfoCard";
 import { HOMEPAGE_ROUTES } from "@/lib/site";
 
@@ -35,6 +36,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <FindYourPathQuiz />
 
       <section className="section alt">
         <div className="container">

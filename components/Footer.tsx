@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -18,7 +19,20 @@ export function Footer() {
             <p>Clear, student-friendly information for exploring military options.</p>
           </div>
         </div>
-        <p>Built for students, parents, counselors, and mentors.</p>
+        <div className="footer-meta">
+          <p>Built for students, parents, counselors, and mentors.</p>
+          <Link href="/about">About Military Futures</Link>
+        </div>
+      </div>
+      <div className="container footer-disclaimer">
+        <p>
+          Military Futures is an independent educational resource and is not
+          affiliated with, endorsed by, or sponsored by the U.S. Department of
+          Defense, any branch of the U.S. Armed Forces, any service academy,
+          ROTC program, or government agency. Information is provided for
+          educational purposes only and should be verified through official
+          sources.
+        </p>
       </div>
     </footer>
   );

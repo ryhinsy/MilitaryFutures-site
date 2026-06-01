@@ -1160,6 +1160,30 @@ section[id] {
   justify-content: space-between;
 }
 
+.footer-meta {
+  display: grid;
+  gap: 6px;
+}
+
+.footer-meta a {
+  color: white;
+  font-weight: 850;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-disclaimer {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  margin-top: 22px;
+  padding-top: 18px;
+}
+
+.footer-disclaimer p {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
 .footer-brand {
   align-items: center;
   display: flex;
@@ -1175,6 +1199,24 @@ section[id] {
 
 .footer-grid p {
   color: rgba(255, 255, 255, 0.72);
+}
+
+.disclaimer-panel,
+.result-disclaimer {
+  background: var(--surface-muted);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px;
+}
+
+.disclaimer-panel strong {
+  color: var(--olive-dark);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.result-disclaimer {
+  font-size: 0.9rem;
 }
 
 @media (max-width: 900px) {

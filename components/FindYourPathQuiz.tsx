@@ -172,6 +172,11 @@ export function FindYourPathQuiz() {
               <span className="quiz-progress-label">Results</span>
               <h3>{rankedResults[0]}</h3>
               <p>{pathwayDescriptions[rankedResults[0]]}</p>
+              <p className="result-disclaimer">
+                This quiz is for informational purposes only and does not
+                constitute official military recruiting, admissions, or career
+                guidance.
+              </p>
               <div className="backup-pathways">
                 <strong>Backup pathways to explore</strong>
                 <div>

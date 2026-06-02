@@ -4,40 +4,40 @@ const academies = [
     name: "West Point",
     city: "West Point",
     state: "NY",
-    marker: { x: 760, y: 210 },
-    label: { x: 650, y: 116 }
+    branch: "Army",
+    marker: { x: 782, y: 180 }
   },
   {
     id: 2,
     name: "Naval Academy",
     city: "Annapolis",
     state: "MD",
-    marker: { x: 750, y: 330 },
-    label: { x: 650, y: 420 }
+    branch: "Navy / Marine Corps",
+    marker: { x: 766, y: 282 }
   },
   {
     id: 3,
     name: "Air Force Academy",
     city: "Colorado Springs",
     state: "CO",
-    marker: { x: 420, y: 330 },
-    label: { x: 250, y: 420 }
+    branch: "Air Force / Space Force",
+    marker: { x: 416, y: 284 }
   },
   {
     id: 4,
     name: "Coast Guard Academy",
     city: "New London",
     state: "CT",
-    marker: { x: 820, y: 185 },
-    label: { x: 690, y: 56 }
+    branch: "Coast Guard",
+    marker: { x: 834, y: 158 }
   },
   {
     id: 5,
     name: "Merchant Marine Academy",
     city: "Kings Point",
     state: "NY",
-    marker: { x: 800, y: 235 },
-    label: { x: 676, y: 270 }
+    branch: "Merchant Marine / Maritime service options",
+    marker: { x: 810, y: 210 }
   }
 ];
 
@@ -53,38 +53,33 @@ export function AcademyMap() {
         >
           <title>Service Academy Locations</title>
           <path
+            className="map-water"
+            d="M0 0H980V560H0V0Z"
+          />
+          <path
             className="map-us-shape"
-            d="M86 250L132 186L220 164L306 182L379 158L482 178L576 155L676 174L776 204L878 253L908 316L842 363L745 374L662 415L548 402L469 442L372 418L292 383L188 374L112 326L86 250Z"
+            d="M130 112L180 82L240 90L295 118L356 118L420 98L482 124L556 112L624 124L692 116L760 138L828 176L884 210L910 252L890 298L844 326L808 378L742 400L676 392L616 430L544 416L494 452L418 444L356 410L282 392L230 366L188 356L152 314L124 286L88 272L74 232L104 184L130 112Z"
           />
           <path
             className="map-us-shape secondary"
-            d="M220 390L278 430L352 438L416 474L358 500L274 482L204 432L220 390Z"
+            d="M206 384L270 420L336 432L392 472L348 504L264 482L196 434L206 384Z"
+          />
+          <path
+            className="map-state-lines"
+            d="M220 104L222 364M340 122L330 414M458 120L458 438M574 118L564 416M694 122L682 390M124 286L842 326M170 188L878 210M188 356L808 378"
           />
           {academies.map((academy) => (
-            <g key={academy.id}>
-              <line
-                className="map-callout-line"
-                x1={academy.marker.x}
-                x2={academy.label.x + 76}
-                y1={academy.marker.y}
-                y2={academy.label.y + 24}
-              />
-              <g transform={`translate(${academy.label.x} ${academy.label.y})`}>
-                <rect className="map-label-box" height="48" rx="7" width="152" />
-                <text className="map-label-title" x="12" y="20">
-                  {academy.id}. {academy.name}
-                </text>
-                <text className="map-label-location" x="12" y="36">
-                  {academy.city}, {academy.state}
-                </text>
-              </g>
-              <g transform={`translate(${academy.marker.x} ${academy.marker.y})`}>
+            <a href={`#academy-location-${academy.id}`} key={academy.id}>
+              <title>
+                {academy.name} - {academy.city}, {academy.state}. {academy.branch}
+              </title>
+              <g className="map-marker-group" transform={`translate(${academy.marker.x} ${academy.marker.y})`}>
                 <circle className="map-marker" r="16" />
                 <text className="map-marker-text" dy="5" textAnchor="middle">
                   {academy.id}
                 </text>
               </g>
-            </g>
+            </a>
           ))}
         </svg>
       </div>
@@ -94,16 +89,18 @@ export function AcademyMap() {
       </p>
       <div className="map-list">
         {academies.map((academy) => (
-          <div key={academy.name}>
+          <div id={`academy-location-${academy.id}`} key={academy.name}>
             <strong>
               {academy.id}. {academy.name}
             </strong>
             <span>
               {academy.city}, {academy.state}
             </span>
+            <small>{academy.branch}</small>
           </div>
         ))}
       </div>
     </div>
   );
 }
+

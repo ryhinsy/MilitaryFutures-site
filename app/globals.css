@@ -1012,13 +1012,17 @@ section[id] {
 .academy-map-svg {
   display: block;
   height: auto;
-  min-width: 760px;
+  min-width: 720px;
   width: 100%;
 }
 
+.map-water {
+  fill: rgba(219, 231, 238, 0.55);
+}
+
 .map-us-shape {
-  fill: rgba(61, 81, 49, 0.16);
-  stroke: rgba(61, 81, 49, 0.34);
+  fill: rgba(155, 171, 134, 0.44);
+  stroke: rgba(61, 81, 49, 0.5);
   stroke-linejoin: round;
   stroke-width: 4;
 }
@@ -1027,26 +1031,22 @@ section[id] {
   fill: rgba(199, 154, 59, 0.16);
 }
 
-.map-callout-line {
-  stroke: rgba(38, 53, 31, 0.45);
+.map-state-lines {
+  fill: none;
+  opacity: 0.28;
+  stroke: rgba(61, 81, 49, 0.5);
+  stroke-linecap: round;
   stroke-width: 2;
 }
 
-.map-label-box {
-  fill: rgba(255, 255, 255, 0.95);
-  stroke: var(--line);
+.map-marker-group {
+  cursor: pointer;
 }
 
-.map-label-title {
+.map-marker-group:hover .map-marker,
+.map-marker-group:focus .map-marker {
   fill: var(--olive-dark);
-  font-size: 13px;
-  font-weight: 900;
-}
-
-.map-label-location {
-  fill: var(--ink-muted);
-  font-size: 12px;
-  font-weight: 800;
+  stroke: var(--brass);
 }
 
 .map-marker {
@@ -1080,9 +1080,20 @@ section[id] {
   padding: 14px;
 }
 
+.map-list div:target {
+  border-color: var(--brass);
+  box-shadow: 0 0 0 3px rgba(199, 154, 59, 0.18);
+}
+
 .map-list span {
   color: var(--ink-muted);
   font-size: 0.9rem;
+}
+
+.map-list small {
+  color: var(--olive);
+  font-size: 0.78rem;
+  font-weight: 900;
 }
 
 .spaced-top {

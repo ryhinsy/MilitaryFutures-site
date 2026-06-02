@@ -7,32 +7,21 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <div className="container hero-grid">
-          <div>
-            <div className="eyebrow">Plan clearly. Serve thoughtfully.</div>
-            <h1>Military Futures</h1>
-            <p className="hero-copy">
-              A modern guide for students and families comparing academies,
-              ROTC, enlistment, commissioning, Guard service, nominations, and
-              career pathways without getting lost in acronyms.
-            </p>
-            <div className="hero-actions">
-              <Link className="button primary" href="/student-checklist">
-                Start the checklist
-              </Link>
-              <Link className="button secondary" href="/service-academies">
-                Explore pathways
-              </Link>
-            </div>
-          </div>
-          <div className="hero-visual" aria-label="Illustration of a campus pathway">
-            <div className="hero-visual-panel">
-              <strong>One decision, many routes.</strong>
-              <p>
-                Compare timelines, requirements, and commitments before choosing
-                the next step.
-              </p>
-            </div>
+        <div className="container hero-content">
+          <div className="eyebrow">Plan clearly. Serve thoughtfully.</div>
+          <h1>Military Futures</h1>
+          <p className="hero-copy">
+            A modern guide for students and families comparing academies,
+            ROTC, enlistment, commissioning, Guard service, nominations, and
+            career pathways without getting lost in acronyms.
+          </p>
+          <div className="hero-actions">
+            <Link className="button primary" href="/student-checklist">
+              Start the checklist
+            </Link>
+            <Link className="button secondary" href="/service-academies">
+              Explore pathways
+            </Link>
           </div>
         </div>
       </section>

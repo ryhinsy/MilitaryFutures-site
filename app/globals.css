@@ -111,14 +111,14 @@ ol {
 
 .hero {
   overflow: hidden;
-  padding: 72px 0 54px;
+  padding: 82px 0 70px;
 }
 
-.hero-grid {
+.hero-content {
   align-items: center;
-  display: grid;
-  gap: 42px;
-  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .eyebrow {
@@ -140,7 +140,7 @@ h3 {
 
 h1 {
   font-size: clamp(2.7rem, 6vw, 5.4rem);
-  max-width: 10ch;
+  max-width: 12ch;
 }
 
 h2 {
@@ -152,15 +152,16 @@ h3 {
 }
 
 .hero-copy {
-  font-size: 1.12rem;
+  font-size: clamp(1.08rem, 2vw, 1.22rem);
   margin-top: 22px;
-  max-width: 620px;
+  max-width: 760px;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  justify-content: center;
   margin-top: 28px;
 }
 
@@ -191,37 +192,6 @@ h3 {
   box-shadow: var(--shadow);
   outline: none;
   transform: translateY(-1px);
-}
-
-.hero-visual {
-  background:
-    linear-gradient(135deg, rgba(61, 81, 49, 0.95), rgba(31, 42, 36, 0.92)),
-    url("/campus-pathways.svg");
-  background-position: center;
-  background-size: cover;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  min-height: 430px;
-  overflow: hidden;
-  position: relative;
-}
-
-.hero-visual-panel {
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: var(--radius);
-  bottom: 24px;
-  left: 24px;
-  max-width: 320px;
-  padding: 20px;
-  position: absolute;
-}
-
-.hero-visual-panel strong {
-  color: var(--olive-dark);
-  display: block;
-  font-size: 1.35rem;
-  margin-bottom: 8px;
 }
 
 .quiz-section {
@@ -1240,7 +1210,6 @@ section[id] {
     top: 170px;
   }
 
-  .hero-grid,
   .page-grid,
   .quiz-shell {
     grid-template-columns: 1fr;
@@ -1263,10 +1232,6 @@ section[id] {
 
   .timeline-filter-bar button {
     flex: 0 0 auto;
-  }
-
-  .hero-visual {
-    min-height: 340px;
   }
 
   .card-grid,
@@ -1422,9 +1387,4 @@ section[id] {
     overflow-x: auto;
   }
 
-  .hero-visual-panel {
-    bottom: 14px;
-    left: 14px;
-    right: 14px;
-  }
 }

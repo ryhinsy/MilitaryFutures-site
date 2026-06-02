@@ -1,5 +1,4 @@
 import { AcademiesNav } from "@/components/AcademiesNav";
-import { ComparisonTable } from "@/components/ComparisonTable";
 import { ContentCard } from "@/components/ContentCard";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -41,56 +40,6 @@ export default function ServiceAcademiesPage() {
         </div>
       </section>
 
-      <section className="section alt">
-        <div className="container">
-          <SectionHeader eyebrow="Compare" title="Federal Service Academies" />
-          <ComparisonTable
-            columns={["Primary branch", "Nomination usually required", "Student note"]}
-            rows={[
-              {
-                label: "U.S. Military Academy at West Point",
-                values: [
-                  "Army",
-                  "Yes",
-                  "Often called West Point; strong fit for students drawn to Army leadership and land-based missions."
-                ]
-              },
-              {
-                label: "U.S. Naval Academy",
-                values: [
-                  "Navy / Marine Corps",
-                  "Yes",
-                  "Prepares officers for Navy and Marine Corps communities, including aviation, surface, submarines, and ground roles."
-                ]
-              },
-              {
-                label: "U.S. Air Force Academy",
-                values: [
-                  "Air Force / Space Force",
-                  "Yes",
-                  "Strong fit for students interested in air, space, cyber, engineering, and technical operations."
-                ]
-              },
-              {
-                label: "U.S. Merchant Marine Academy",
-                values: [
-                  "Maritime service options",
-                  "Yes",
-                  "Combines maritime training with several service obligation options after graduation."
-                ]
-              },
-              {
-                label: "U.S. Coast Guard Academy",
-                values: [
-                  "Coast Guard",
-                  "No congressional nomination",
-                  "Students complete a competitive academy application, but a congressional nomination is not required."
-                ]
-              }
-            ]}
-          />
-        </div>
-      </section>
     </>
   );
 }

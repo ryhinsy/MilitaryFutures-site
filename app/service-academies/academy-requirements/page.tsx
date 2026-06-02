@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { AcademiesNav } from "@/components/AcademiesNav";
 import { Checklist } from "@/components/Checklist";
 import { ContentCard } from "@/components/ContentCard";
@@ -16,7 +15,7 @@ export default function AcademyRequirementsPage() {
       <AcademiesNav active="academy-requirements" />
       <section className="section">
         <div className="container">
-          <SectionHeader eyebrow="Cost + commitment" title="Academy Cost, Location, and Officer Pay">
+          <SectionHeader eyebrow="Cost + commitment" title="Academy Cost, Commitment, and Officer Pay">
             Service academies are generally tuition-funded in exchange for a
             service obligation, and most graduates commission after four years
             as officers. Verify current details with official academy sources.
@@ -71,24 +70,6 @@ export default function AcademyRequirementsPage() {
             >
               DoD compensation calculators
             </a>
-          </div>
-        </div>
-      </section>
-      <section className="section alt">
-        <div className="container">
-          <SectionHeader eyebrow="Map" title="Where the Academies Are Located">
-            Locations are approximate for visual clarity. Use official academy
-            sites for addresses, visits, and travel planning.
-          </SectionHeader>
-          <div className="academy-map-image-wrap">
-            <Image
-              alt="Map showing the locations of the five U.S. service academies."
-              className="academy-map-image"
-              height={1024}
-              sizes="(max-width: 900px) 100vw, 1120px"
-              src="/service-academies-map.png"
-              width={1536}
-            />
           </div>
         </div>
       </section>

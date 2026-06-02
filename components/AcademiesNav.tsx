@@ -17,7 +17,12 @@ const academyNavItems = [
     label: "Academy Requirements",
     key: "academy-requirements"
   },
-  { href: "/service-academies/deadlines", label: "Deadlines", key: "deadlines" }
+  { href: "/service-academies/deadlines", label: "Deadlines", key: "deadlines" },
+  {
+    href: "/service-academies/after-graduation",
+    label: "After Graduation",
+    key: "after-graduation"
+  }
 ];
 
 type AcademiesNavProps = {

@@ -14,13 +14,13 @@ export default function Home() {
             A modern guide for students and families comparing academies,
             ROTC, enlistment, commissioning, Guard service, nominations, and
             career pathways without getting lost in acronyms.
-          </p>
-          <div className="hero-actions">
-            <Link className="button primary" href="/student-checklist">
-              Start the checklist
-            </Link>
-            <Link className="button secondary" href="/service-academies">
-              Explore pathways
+            </p>
+            <div className="hero-actions">
+              <Link className="button primary" href="/enlistment-vs-commissioning">
+                Compare pathways
+              </Link>
+              <Link className="button secondary" href="/service-academies">
+                Explore pathways
             </Link>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function Home() {
               windows, and local representative information.
             </InfoCard>
             <InfoCard icon="03" title="Plan next steps">
-              Use student-friendly checklists and resource pages to move from
+              Use pathway pages, timelines, and official resources to move from
               curiosity to a confident action plan.
             </InfoCard>
           </div>
@@ -79,15 +79,15 @@ export default function Home() {
       <section className="callout">
         <div className="container">
           <div>
-            <h2>Start with the student checklist.</h2>
+            <h2>Compare the path before choosing it.</h2>
             <p>
-              A structured checklist can help students identify deadlines,
-              documents, questions for recruiters or admissions officers, and
-              conversations to have at home.
+              Each route has different training, college, service commitment,
+              lifestyle, and family considerations. Start with the comparison
+              guide, then go deeper on the pathway that fits.
             </p>
           </div>
-          <Link className="button secondary" href="/student-checklist">
-            Open checklist
+          <Link className="button secondary" href="/enlistment-vs-commissioning">
+            Open comparison guide
           </Link>
         </div>
       </section>

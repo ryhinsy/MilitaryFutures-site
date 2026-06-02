@@ -1,3 +1,4 @@
+import { Checklist } from "@/components/Checklist";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { ContentCard } from "@/components/ContentCard";
 import { PageHero } from "@/components/PageHero";
@@ -132,6 +133,28 @@ export default function EnlistmentVsCommissioningPage() {
               }
             ]}
           />
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container content-grid two">
+          <Checklist
+            title="Enlisting Questions to Prepare"
+            items={[
+              "Which branch missions and job fields interest me most?",
+              "What does the contract guarantee, and what does it not guarantee?",
+              "How long are basic training and job-specific school?",
+              "What education benefits may apply, and when do they start?",
+              "What medical, fitness, citizenship, and test score requirements apply?",
+              "What active duty, Guard, Reserve, or delayed entry options should I compare?",
+              "Who can review the commitment with me before I sign?"
+            ]}
+          />
+          <ContentCard title="Before Signing Anything" kicker="Student reminder">
+            Students should read every contract carefully, ask questions in
+            writing when possible, compare full-time and part-time components,
+            and talk with trusted adults before committing to a service path.
+          </ContentCard>
         </div>
       </section>
 

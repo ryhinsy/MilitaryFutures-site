@@ -14,7 +14,6 @@ This project uses Next.js with the App Router because it is a strong fit for an 
 - Enlistment vs Commissioning
 - National Guard
 - Congressional Nominations, nested within the Service Academies guide
-- Student Checklist
 - Resources
 
 ## Project Structure
@@ -29,7 +28,7 @@ app/
   enlistment-vs-commissioning/page.tsx
   national-guard/page.tsx
   congressional-nominations/page.tsx  # redirects into the Academies nominations section
-  student-checklist/page.tsx
+  student-checklist/page.tsx  # redirects to the comparison guide
   resources/page.tsx
 components/
   Footer.tsx

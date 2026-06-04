@@ -996,18 +996,95 @@ section[id] {
   outline: none;
 }
 
-.academy-map-image-wrap {
+.deadline-card-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.deadline-flip-card {
+  min-height: 100%;
+}
+
+.deadline-flip-card summary {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  min-height: 100%;
+  padding: 22px;
+  transition: box-shadow 180ms ease, transform 180ms ease;
 }
 
-.academy-map-image {
-  display: block;
-  height: auto;
-  width: 100%;
+.deadline-flip-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.deadline-flip-card summary:hover,
+.deadline-flip-card summary:focus-visible {
+  box-shadow: var(--shadow);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.deadline-card-front {
+  display: grid;
+  gap: 12px;
+}
+
+.deadline-card-front strong {
+  color: var(--olive-dark);
+  font-size: 1.28rem;
+  line-height: 1.15;
+}
+
+.deadline-card-front span:not(.eyebrow) {
+  color: var(--ink-muted);
+  line-height: 1.55;
+}
+
+.deadline-card-front em {
+  color: var(--olive);
+  font-style: normal;
+  font-weight: 900;
+}
+
+.deadline-card-back {
+  background: var(--olive-dark);
+  border-radius: var(--radius);
+  color: white;
+  margin-top: 10px;
+  padding: 22px;
+}
+
+.deadline-card-back h3 {
+  color: white;
+  margin-bottom: 12px;
+}
+
+.deadline-card-back ul {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+}
+
+.deadline-card-back li {
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.55;
+  padding-left: 20px;
+  position: relative;
+}
+
+.deadline-card-back li::before {
+  background: var(--brass);
+  border-radius: 999px;
+  content: "";
+  height: 7px;
+  left: 0;
+  position: absolute;
+  top: 0.7em;
+  width: 7px;
 }
 
 .spaced-top {
@@ -1161,6 +1238,7 @@ section[id] {
 
   .card-grid,
   .route-grid,
+  .deadline-card-grid,
   .content-grid,
   .content-grid.two {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1301,6 +1379,7 @@ section[id] {
   .card-grid,
   .route-grid,
   .page-grid,
+  .deadline-card-grid,
   .content-grid,
   .content-grid.two {
     grid-template-columns: 1fr;

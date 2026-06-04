@@ -33,6 +33,25 @@ export default function AcademyNominationsPage() {
               admissions websites because policies and procedures can change.
             </p>
           </div>
+          <div className="content-grid stack-title">
+            <ContentCard title="How many can I pursue?" kicker="Apply broadly">
+              Students can usually apply to multiple nomination sources in the
+              same admissions cycle. A typical applicant may pursue both U.S.
+              senators, their U.S. representative, the Vice President, and any
+              service-connected sources for which they are eligible.
+            </ContentCard>
+            <ContentCard title="Different offices, different rules" kicker="Verify locally">
+              Each nominating office sets its own deadline, forms, essays,
+              recommendation rules, interview process, and academy preference
+              instructions. Build a separate checklist for every office.
+            </ContentCard>
+            <ContentCard title="Year-to-year changes" kicker="Check every cycle">
+              Nomination applications are tied to a specific academy admissions
+              cycle. Procedures can change from one year to the next, so use
+              the current instructions from each senator, representative,
+              academy, and eligible service-connected source.
+            </ContentCard>
+          </div>
           <div className="content-grid">
             <ContentCard title="Your U.S. Senators" kicker="Statewide sources">
               Students should review the official academy nomination
@@ -45,9 +64,10 @@ export default function AcademyNominationsPage() {
               nomination application instructions.
             </ContentCard>
             <ContentCard title="Other Sources" kicker="Eligibility varies">
-              Some students may qualify for Vice Presidential or
-              service-connected nomination categories. Academy admissions teams
-              can help students understand which categories may apply.
+              Some students may qualify for Vice Presidential,
+              Presidential, ROTC, active duty, reserve component, or other
+              service-connected nomination categories. Eligibility depends on
+              the academy and the student&apos;s circumstances.
             </ContentCard>
           </div>
           <div className="link-panel spaced-top" aria-label="Official nomination lookup links">
@@ -64,6 +84,48 @@ export default function AcademyNominationsPage() {
               target="_blank"
             >
               U.S. Senate state lookup
+            </a>
+            <a
+              href="https://www.whitehouse.gov/service-academy-nominations/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Vice Presidential nomination information
+            </a>
+            <a
+              href="https://www.westpoint.edu/admissions/steps-to-admission"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              West Point nomination guidance
+            </a>
+            <a
+              href="https://usna.edu/Admissions/Apply/Nomination-Sources.php"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Naval Academy nomination sources
+            </a>
+            <a
+              href="https://www.academyadmissions.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Air Force Academy admissions
+            </a>
+            <a
+              href="https://www.usmma.edu/admissions/apply-nomination"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Merchant Marine Academy nomination guidance
+            </a>
+            <a
+              href="https://uscga.edu/admissions/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Coast Guard Academy admissions
             </a>
           </div>
         </div>

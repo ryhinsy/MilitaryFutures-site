@@ -12,11 +12,6 @@ const academyNavItems = [
     label: "Congressional Nominations",
     key: "congressional-nominations"
   },
-  {
-    href: "/service-academies/academy-requirements",
-    label: "Academy Requirements",
-    key: "academy-requirements"
-  },
   { href: "/service-academies/deadlines", label: "Deadlines", key: "deadlines" },
   {
     href: "/service-academies/after-graduation",

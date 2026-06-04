@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { AcademiesNav } from "@/components/AcademiesNav";
 import { ContentCard } from "@/components/ContentCard";
 import { PageHero } from "@/components/PageHero";
@@ -37,25 +36,6 @@ export default function ServiceAcademiesPage() {
               Most graduates serve as active duty officers for a required
               period. Students should understand the commitment before applying.
             </ContentCard>
-          </div>
-        </div>
-      </section>
-
-      <section className="section alt">
-        <div className="container">
-          <SectionHeader eyebrow="Map" title="Where the Academies Are Located">
-            Locations are approximate for visual clarity. Use official academy
-            sites for addresses, visits, and travel planning.
-          </SectionHeader>
-          <div className="academy-map-image-wrap">
-            <Image
-              alt="Map showing the locations of the five U.S. service academies."
-              className="academy-map-image"
-              height={1024}
-              sizes="(max-width: 900px) 100vw, 1120px"
-              src="/service-academies-map.png"
-              width={1536}
-            />
           </div>
         </div>
       </section>

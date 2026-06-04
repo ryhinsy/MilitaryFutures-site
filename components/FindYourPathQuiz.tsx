@@ -24,10 +24,10 @@ type Question = {
 const pathwayLinks: Record<Pathway, string> = {
   "Service Academy": "/service-academies",
   ROTC: "/rotc",
-  Enlisting: "/enlistment-vs-commissioning#enlistment",
+  Enlisting: "/enlisting",
   "National Guard": "/national-guard",
   "Air National Guard": "/national-guard",
-  Reserves: "/enlistment-vs-commissioning"
+  Reserves: "/compare"
 };
 
 const pathwayDescriptions: Record<Pathway, string> = {

@@ -16,7 +16,7 @@ export default function Home() {
             career pathways without getting lost in acronyms.
             </p>
             <div className="hero-actions">
-              <Link className="button primary" href="/enlistment-vs-commissioning">
+              <Link className="button primary" href="/compare">
                 Compare pathways
               </Link>
               <Link className="button secondary" href="/service-academies">
@@ -45,7 +45,7 @@ export default function Home() {
             </InfoCard>
             <InfoCard icon="02" title="Understand requirements">
               Track nominations, fitness expectations, applications, scholarship
-              windows, and local representative information.
+              windows, and official source links.
             </InfoCard>
             <InfoCard icon="03" title="Plan next steps">
               Use pathway pages, timelines, and official resources to move from
@@ -86,7 +86,7 @@ export default function Home() {
               guide, then go deeper on the pathway that fits.
             </p>
           </div>
-          <Link className="button secondary" href="/enlistment-vs-commissioning">
+          <Link className="button secondary" href="/compare">
             Open comparison guide
           </Link>
         </div>

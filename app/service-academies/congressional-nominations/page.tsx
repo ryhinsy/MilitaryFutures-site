@@ -1,6 +1,4 @@
 import { AcademiesNav } from "@/components/AcademiesNav";
-import { Checklist } from "@/components/Checklist";
-import { ContentCard } from "@/components/ContentCard";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Timeline } from "@/components/Timeline";
@@ -33,43 +31,36 @@ export default function AcademyNominationsPage() {
               admissions websites because policies and procedures can change.
             </p>
           </div>
-          <div className="content-grid stack-title">
-            <ContentCard title="How many can I pursue?" kicker="Apply broadly">
-              Students can usually apply to multiple nomination sources in the
-              same admissions cycle. A typical applicant may pursue both U.S.
-              senators, their U.S. representative, the Vice President, and any
-              service-connected sources for which they are eligible.
-            </ContentCard>
-            <ContentCard title="Different offices, different rules" kicker="Verify locally">
-              Each nominating office sets its own deadline, forms, essays,
-              recommendation rules, interview process, and academy preference
-              instructions. Build a separate checklist for every office.
-            </ContentCard>
-            <ContentCard title="Year-to-year changes" kicker="Check every cycle">
-              Nomination applications are tied to a specific academy admissions
-              cycle. Procedures can change from one year to the next, so use
-              the current instructions from each senator, representative,
-              academy, and eligible service-connected source.
-            </ContentCard>
-          </div>
-          <div className="content-grid">
-            <ContentCard title="Your U.S. Senators" kicker="Statewide sources">
-              Students should review the official academy nomination
-              instructions for both senators from their home state each
-              application cycle.
-            </ContentCard>
-            <ContentCard title="U.S. Representative" kicker="District source">
-              Students should use their home address to confirm their
-              congressional district, then follow that representative&apos;s
-              nomination application instructions.
-            </ContentCard>
-            <ContentCard title="Other Sources" kicker="Eligibility varies">
-              Some students may qualify for Vice Presidential,
-              Presidential, ROTC, active duty, reserve component, or other
-              service-connected nomination categories. Eligibility depends on
-              the academy and the student&apos;s circumstances.
-            </ContentCard>
-          </div>
+          <article className="guide-article stack-title">
+            <div className="guide-block">
+              <h3>Students can usually pursue more than one source</h3>
+              <p>
+                A typical applicant may apply to both U.S. senators, their U.S.
+                representative, the Vice President, and any service-connected
+                source for which they are eligible. Applying broadly can help,
+                but every office has its own process.
+              </p>
+            </div>
+            <div className="guide-block">
+              <h3>Common nomination sources</h3>
+              <ul className="guide-list">
+                <li>U.S. senators from the student&apos;s home state.</li>
+                <li>The U.S. representative for the student&apos;s congressional district.</li>
+                <li>The Vice President nomination process.</li>
+                <li>Service-connected categories when a student is eligible.</li>
+              </ul>
+            </div>
+            <div className="guide-block">
+              <h3>Rules vary by office and year</h3>
+              <p>
+                Each nominating office sets its own deadline, forms, essays,
+                recommendation rules, interview process, and academy preference
+                instructions. Nomination applications are tied to a specific
+                admissions cycle, so students should verify current rules every
+                year.
+              </p>
+            </div>
+          </article>
           <div className="link-panel spaced-top" aria-label="Official nomination lookup links">
             <a
               href="https://www.house.gov/representatives/find-your-representative"
@@ -160,31 +151,31 @@ export default function AcademyNominationsPage() {
         </div>
       </section>
       <section className="section">
-        <div className="container content-grid two">
-          <Checklist
-            title="Nomination Document Checklist"
-            items={[
-              "Completed nomination application form",
-              "High school transcript",
-              "ACT or SAT scores if requested",
-              "Activities, employment, athletics, and leadership resume",
-              "Personal essay or motivation statement",
-              "Letters of recommendation",
-              "Academy preference ranking if requested",
-              "Interview date, location, and contact information"
-            ]}
-          />
-          <Checklist
-            title="Interview Preparation"
-            items={[
-              "Explain why you want to serve as an officer",
-              "Know why each academy on your list fits your goals",
-              "Prepare examples of leadership, teamwork, failure, and resilience",
-              "Practice concise answers with a counselor, teacher, or mentor",
-              "Be ready to discuss ROTC or civilian college backup plans",
-              "Dress neatly, arrive early, and send follow-up materials quickly"
-            ]}
-          />
+        <div className="container">
+          <SectionHeader title="Documents and Interview Preparation" />
+          <div className="guide-columns">
+            <div>
+              <h3>Common documents</h3>
+              <ul>
+                <li>Completed nomination application form.</li>
+                <li>High school transcript and test scores if requested.</li>
+                <li>Activities, employment, athletics, and leadership resume.</li>
+                <li>Personal essay or motivation statement.</li>
+                <li>Letters of recommendation.</li>
+                <li>Academy preference ranking if requested.</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Interview preparation</h3>
+              <ul>
+                <li>Explain why you want to serve as an officer.</li>
+                <li>Know why each academy on your list fits your goals.</li>
+                <li>Prepare examples of leadership, teamwork, failure, and resilience.</li>
+                <li>Practice concise answers with a counselor, teacher, or mentor.</li>
+                <li>Be ready to discuss ROTC or civilian college backup plans.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
     </>

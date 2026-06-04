@@ -1,7 +1,6 @@
 import { AcademiesNav } from "@/components/AcademiesNav";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeader } from "@/components/SectionHeader";
-import { Timeline } from "@/components/Timeline";
 
 export default function AcademyApplicationProcessPage() {
   return (
@@ -15,50 +14,51 @@ export default function AcademyApplicationProcessPage() {
       <section className="section">
         <div className="container">
           <SectionHeader eyebrow="Steps" title="The Academy Admissions Journey" />
-          <Timeline
-            items={[
-              {
-                time: "Step 1",
-                title: "Research academies",
-                text: "Compare each academy's branch, majors, campus life, service commitment, nomination rules, and career outcomes."
-              },
-              {
-                time: "Step 2",
-                title: "Pre-candidate phase",
-                text: "Submit preliminary applications or pre-candidate questionnaires and gather transcripts, scores, activities, and leadership examples."
-              },
-              {
-                time: "Step 3",
-                title: "Candidate phase",
-                text: "Complete candidate portals, essays, recommendations, fitness assessment, medical steps, and interviews."
-              },
-              {
-                time: "Step 4",
-                title: "Congressional nominations",
-                text: "Most academies require a nomination. Coast Guard Academy does not require a congressional nomination."
-              },
-              {
-                time: "Step 5",
-                title: "Candidate Fitness Assessment",
-                text: "Train before testing and follow academy instructions for administration and score submission."
-              },
-              {
-                time: "Step 6",
-                title: "Medical qualification and DoDMERB",
-                text: "Respond quickly to medical exam, record, waiver, or follow-up requests."
-              },
-              {
-                time: "Step 7",
-                title: "Recommendations and interviews",
-                text: "Prepare adults who know your performance well, then practice clear answers about service, leadership, and resilience."
-              },
-              {
-                time: "Step 8",
-                title: "Appointments and final decisions",
-                text: "An appointment is an offer of admission. Students may also see prep school, waitlist, ROTC, or civilian college options."
-              }
-            ]}
-          />
+          <article className="guide-article">
+            <div className="guide-block">
+              <h3>Start by researching each academy</h3>
+              <p>
+                Compare the branch, majors, campus environment, service
+                commitment, nomination rules, and career paths after graduation.
+                Students should also keep ROTC and civilian college options
+                active while they explore.
+              </p>
+            </div>
+            <div className="guide-block">
+              <h3>Move from pre-candidate to candidate</h3>
+              <p>
+                Most applicants begin with a preliminary application or
+                pre-candidate questionnaire. Competitive students are then
+                invited into a fuller candidate phase with portals, essays,
+                recommendations, activities, transcripts, and test scores.
+              </p>
+            </div>
+            <div className="guide-block">
+              <h3>Complete fitness, medical, and nomination steps</h3>
+              <p>
+                The Candidate Fitness Assessment and DoDMERB medical process can
+                take time, so students should respond quickly to instructions
+                and follow-up requests. Most academies also require a nomination;
+                the Coast Guard Academy does not require a congressional
+                nomination.
+              </p>
+            </div>
+            <div className="guide-block">
+              <h3>Prepare for interviews and final decisions</h3>
+              <p>
+                Students may interview with nomination panels, academy liaison
+                officers, or admissions representatives. An appointment is an
+                offer of admission. Students may also see prep school, waitlist,
+                ROTC, or civilian college outcomes.
+              </p>
+            </div>
+            <div className="note-band">
+              <strong>Application rhythm</strong>
+              Treat the academy process like several projects happening at once:
+              admissions, nominations, fitness, medical qualification,
+              recommendations, and backup plans.
+            </div>
+          </article>
         </div>
       </section>
     </>

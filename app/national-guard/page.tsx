@@ -1,6 +1,4 @@
-import { Checklist } from "@/components/Checklist";
 import { ComparisonTable } from "@/components/ComparisonTable";
-import { ContentCard } from "@/components/ContentCard";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Timeline } from "@/components/Timeline";
@@ -22,21 +20,31 @@ export default function NationalGuardPage() {
             military commitment. Members train regularly, attend job school, and
             can be activated for state emergencies or federal missions.
           </SectionHeader>
-          <div className="content-grid">
-            <ContentCard title="State mission" kicker="Local response">
-              Guard members can support emergencies such as severe weather,
-              public safety needs, disaster response, and other state-directed
-              missions.
-            </ContentCard>
-            <ContentCard title="Federal mission" kicker="National defense">
-              Guard units can also deploy or activate under federal authority,
-              depending on branch needs, unit mission, and world events.
-            </ContentCard>
-            <ContentCard title="Civilian life" kicker="School + work">
-              Many members balance Guard service with college, apprenticeships,
-              full-time work, family responsibilities, and community life.
-            </ContentCard>
-          </div>
+          <article className="guide-article">
+            <div className="guide-block">
+              <h3>State mission</h3>
+              <p>
+                Guard members can support emergencies such as severe weather,
+                public safety needs, disaster response, and other state-directed
+                missions.
+              </p>
+            </div>
+            <div className="guide-block">
+              <h3>Federal mission</h3>
+              <p>
+                Guard units can also deploy or activate under federal authority,
+                depending on branch needs, unit mission, and world events.
+              </p>
+            </div>
+            <div className="guide-block">
+              <h3>Civilian life</h3>
+              <p>
+                Many members balance Guard service with college,
+                apprenticeships, full-time work, family responsibilities, and
+                community life.
+              </p>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -80,27 +88,30 @@ export default function NationalGuardPage() {
       </section>
 
       <section className="section">
-        <div className="container content-grid two">
-          <ContentCard title="Best For" kicker="Student fit">
+        <div className="container">
+          <div className="guide-columns">
+            <div>
+              <h3>Best for</h3>
             <ul>
               <li>Students who want to serve while staying connected to their state.</li>
               <li>Students interested in part-time service with military job training.</li>
               <li>Students who want to combine college, work, and service.</li>
               <li>Students who understand that activation can interrupt normal plans.</li>
             </ul>
-          </ContentCard>
-          <Checklist
-            title="Questions for a Guard Recruiter"
-            items={[
-              "What specific job openings are available in units near my home or school?",
-              "Where is the unit located, and how far is drill from home or college?",
-              "How long are basic training and job training for this role?",
-              "What education benefits apply, and what are the eligibility rules?",
-              "How often has this unit deployed or activated recently?",
-              "Can this contract work with my intended college schedule?",
-              "What happens if I transfer schools or move?"
-            ]}
-          />
+            </div>
+            <div>
+              <h3>Questions for a Guard recruiter</h3>
+              <ul>
+                <li>What job openings are available in units near my home or school?</li>
+                <li>Where is the unit located, and how far is drill from home or college?</li>
+                <li>How long are basic training and job training for this role?</li>
+                <li>What education benefits apply, and what are the eligibility rules?</li>
+                <li>How often has this unit deployed or activated recently?</li>
+                <li>Can this contract work with my intended college schedule?</li>
+                <li>What happens if I transfer schools or move?</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 

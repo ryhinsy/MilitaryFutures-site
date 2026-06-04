@@ -827,6 +827,72 @@ section[id] {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.guide-article {
+  display: grid;
+  gap: 28px;
+  max-width: 860px;
+}
+
+.guide-article.wide {
+  max-width: 100%;
+}
+
+.guide-block {
+  display: grid;
+  gap: 12px;
+}
+
+.guide-block h3 {
+  color: var(--olive-dark);
+  font-size: clamp(1.35rem, 3vw, 2rem);
+}
+
+.guide-block p {
+  max-width: 76ch;
+}
+
+.guide-list,
+.guide-columns ul {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+}
+
+.guide-list li,
+.guide-columns li {
+  color: var(--ink-muted);
+  line-height: 1.6;
+  padding-left: 28px;
+  position: relative;
+}
+
+.guide-list li::before,
+.guide-columns li::before {
+  background: var(--brass);
+  border-radius: 999px;
+  content: "";
+  height: 8px;
+  left: 4px;
+  position: absolute;
+  top: 0.7em;
+  width: 8px;
+}
+
+.guide-columns {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.guide-columns > div {
+  display: grid;
+  gap: 12px;
+}
+
+.guide-columns h3 {
+  color: var(--olive-dark);
+}
+
 .content-card {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -1312,6 +1378,7 @@ section[id] {
   }
 
   .page-grid,
+  .guide-columns,
   .quiz-shell {
     grid-template-columns: 1fr;
   }

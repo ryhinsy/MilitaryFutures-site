@@ -1,6 +1,5 @@
 import { AcademiesNav } from "@/components/AcademiesNav";
 import { ComparisonTable } from "@/components/ComparisonTable";
-import { ContentCard } from "@/components/ContentCard";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeader } from "@/components/SectionHeader";
 import { academyDetails } from "@/lib/academy-data";
@@ -24,24 +23,33 @@ export default function AfterGraduationPage() {
             obligation can vary by academy, service needs, student preference,
             performance, medical qualification, and current policy.
           </SectionHeader>
-          <div className="content-grid">
-            <ContentCard title="New Officer Rank" kicker="Starting point">
-              Graduates usually begin as O-1 officers. Army, Air Force, Space
-              Force, and Marine officers usually start as second lieutenants.
-              Navy and Coast Guard officers usually start as ensigns.
-            </ContentCard>
-            <ContentCard title="Officer Life" kicker="Leadership role">
-              New officers are responsible for leading teams, learning from
-              experienced enlisted leaders, managing training, meeting standards,
-              and making decisions that affect people and missions.
-            </ContentCard>
-            <ContentCard title="First Assignments" kicker="Training first">
-              Many graduates report to follow-on training before their first
-              operational unit. That could mean flight training, shipboard
-              training, cyber school, infantry training, engineering training,
-              maritime work, or another branch-specific pipeline.
-            </ContentCard>
-          </div>
+          <article className="guide-article">
+            <div className="guide-block">
+              <h3>New officer rank</h3>
+              <p>
+                Graduates usually begin as O-1 officers. Army, Air Force, Space
+                Force, and Marine officers usually start as second lieutenants.
+                Navy and Coast Guard officers usually start as ensigns.
+              </p>
+            </div>
+            <div className="guide-block">
+              <h3>Officer life starts with learning</h3>
+              <p>
+                New officers are responsible for leading teams, learning from
+                experienced enlisted leaders, managing training, meeting
+                standards, and making decisions that affect people and missions.
+              </p>
+            </div>
+            <div className="guide-block">
+              <h3>First assignments often include more training</h3>
+              <p>
+                Many graduates report to follow-on training before their first
+                operational unit. That could mean flight training, shipboard
+                training, cyber school, infantry training, engineering training,
+                maritime work, or another branch-specific pipeline.
+              </p>
+            </div>
+          </article>
           <div className="note-band spaced-top">
             <strong>Verify each year</strong>
             Obligations, career field options, assignment rules, and training
@@ -110,30 +118,29 @@ export default function AfterGraduationPage() {
             as officers. Students should verify current costs, benefits, and
             obligations with official academy sources.
           </SectionHeader>
-          <div className="content-grid">
-            {academyDetails.map((academy) => (
-              <ContentCard title={academy.name} kicker={academy.formalName} key={academy.name}>
-                <ul>
-                  <li>
-                    <strong>Estimated cost:</strong> Tuition, room, board, and
-                    related academy costs are generally funded, with cadets or
-                    midshipmen receiving pay or allowances while enrolled.
-                  </li>
-                  <li>
-                    <strong>Commissioning:</strong> {academy.commitment}
-                  </li>
-                  <li>
-                    <strong>Starting officer pay:</strong> A newly commissioned
-                    O-1 basic pay estimate changes by year and can be affected
-                    by housing, food, taxes, location, and specialty factors.
-                  </li>
-                </ul>
-                <a className="text-link" href={academy.source} rel="noopener noreferrer" target="_blank">
-                  Verify academy details
-                </a>
-              </ContentCard>
-            ))}
-          </div>
+          <article className="guide-article wide">
+            <div className="guide-block">
+              <p>
+                Tuition, room, board, and related academy costs are generally
+                funded in exchange for a service obligation. Cadets or
+                midshipmen may receive pay or allowances while enrolled. A newly
+                commissioned O-1 officer&apos;s pay changes by year and can be
+                affected by housing, food, taxes, location, and specialty
+                factors.
+              </p>
+            </div>
+            <div className="guide-columns">
+              {academyDetails.map((academy) => (
+                <div key={academy.name}>
+                  <h3>{academy.name}</h3>
+                  <p>{academy.commitment}</p>
+                  <a className="text-link" href={academy.source} rel="noopener noreferrer" target="_blank">
+                    Verify {academy.formalName} details
+                  </a>
+                </div>
+              ))}
+            </div>
+          </article>
           <div className="note-band spaced-top">
             <strong>Pay estimate note</strong>
             <p>
@@ -167,37 +174,19 @@ export default function AfterGraduationPage() {
             The first officer years are often about learning fast, earning
             trust, and taking care of people while building technical skill.
           </SectionHeader>
-          <div className="content-grid">
-            <ContentCard title="Training Continues">
+          <article className="guide-article">
+            <p>
               Graduation does not mean training is over. New officers usually
               attend additional schools, complete qualifications, and learn the
               details of their career field.
-            </ContentCard>
-            <ContentCard title="Leadership Starts Early">
-              Junior officers may lead small teams, sections, platoons,
-              divisions, flights, crews, or project groups depending on the
-              branch and assignment.
-            </ContentCard>
-            <ContentCard title="Service Commitment">
-              Academy graduates generally owe a required service commitment.
-              The length and type of obligation can vary, especially for
-              aviation, maritime, graduate school, or specialized training.
-            </ContentCard>
-            <ContentCard title="Daily Schedule">
-              Daily life might include physical training, planning meetings,
-              technical work, maintenance, watchstanding, training events,
-              travel, field time, deployments, or shift work.
-            </ContentCard>
-            <ContentCard title="Career Growth">
-              Officers are expected to keep learning, take feedback, develop
-              judgment, and prepare for larger leadership roles over time.
-            </ContentCard>
-            <ContentCard title="Family Planning">
-              Assignments, moves, deployments, and training timelines can affect
-              family routines. Students should talk with current officers and
-              academy admissions teams about realistic expectations.
-            </ContentCard>
-          </div>
+            </p>
+            <ul className="guide-list">
+              <li>Junior officers may lead small teams, sections, platoons, divisions, flights, crews, or project groups.</li>
+              <li>Daily life might include physical training, planning meetings, technical work, maintenance, watchstanding, training events, travel, field time, deployments, or shift work.</li>
+              <li>Officers are expected to keep learning, take feedback, develop judgment, and prepare for larger leadership roles.</li>
+              <li>Assignments, moves, deployments, and training timelines can affect family routines.</li>
+            </ul>
+          </article>
         </div>
       </section>
     </>

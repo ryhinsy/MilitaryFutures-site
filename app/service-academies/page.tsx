@@ -1,5 +1,4 @@
 import { AcademiesNav } from "@/components/AcademiesNav";
-import { ContentCard } from "@/components/ContentCard";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeader } from "@/components/SectionHeader";
 
@@ -21,22 +20,31 @@ export default function ServiceAcademiesPage() {
             academics, physical standards, military training, character
             evaluation, and a service commitment.
           </SectionHeader>
-          <div className="content-grid">
-            <ContentCard title="Academics" kicker="College degree">
+          <article className="guide-article">
+            <div className="guide-block">
+              <h3>Academics</h3>
+              <p>
               Students apply to a full undergraduate program and should prepare
               for demanding coursework, especially in math, science, writing,
               and leadership-heavy majors.
-            </ContentCard>
-            <ContentCard title="Leadership" kicker="Whole person review">
+              </p>
+            </div>
+            <div className="guide-block">
+              <h3>Leadership</h3>
+              <p>
               Admissions teams look for students who lead in school, work,
               athletics, community service, scouting, clubs, faith groups, or
               family responsibilities.
-            </ContentCard>
-            <ContentCard title="Service Commitment" kicker="After graduation">
+              </p>
+            </div>
+            <div className="guide-block">
+              <h3>Service Commitment</h3>
+              <p>
               Most graduates serve as active duty officers for a required
               period. Students should understand the commitment before applying.
-            </ContentCard>
-          </div>
+              </p>
+            </div>
+          </article>
         </div>
       </section>
 

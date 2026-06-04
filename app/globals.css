@@ -999,38 +999,65 @@ section[id] {
 .deadline-card-grid {
   display: grid;
   gap: 18px;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .deadline-flip-card {
-  min-height: 100%;
-}
-
-.deadline-flip-card summary {
-  background: var(--surface);
-  border: 1px solid var(--line);
+  background: transparent;
+  border: 0;
   border-radius: var(--radius);
   cursor: pointer;
   display: block;
-  min-height: 100%;
+  font: inherit;
+  min-height: 390px;
+  padding: 0;
+  perspective: 1200px;
+  text-align: left;
+  width: 100%;
+}
+
+.deadline-card-inner {
+  display: block;
+  height: 100%;
+  min-height: 390px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 520ms ease;
+  width: 100%;
+}
+
+.deadline-flip-card.is-flipped .deadline-card-inner {
+  transform: rotateY(180deg);
+}
+
+.deadline-flip-card:focus-visible {
+  outline: 3px solid rgba(199, 154, 59, 0.55);
+  outline-offset: 4px;
+}
+
+.deadline-card-face {
+  backface-visibility: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  display: grid;
+  gap: 14px;
+  inset: 0;
+  min-height: 390px;
   padding: 22px;
+  position: absolute;
   transition: box-shadow 180ms ease, transform 180ms ease;
 }
 
-.deadline-flip-card summary::-webkit-details-marker {
-  display: none;
-}
-
-.deadline-flip-card summary:hover,
-.deadline-flip-card summary:focus-visible {
+.deadline-flip-card:hover .deadline-card-face {
   box-shadow: var(--shadow);
-  outline: none;
   transform: translateY(-2px);
 }
 
 .deadline-card-front {
-  display: grid;
-  gap: 12px;
+  align-content: space-between;
+  background:
+    linear-gradient(180deg, rgba(238, 241, 231, 0.7), rgba(255, 255, 255, 0.96)),
+    var(--surface);
 }
 
 .deadline-card-front strong {
@@ -1052,21 +1079,30 @@ section[id] {
 
 .deadline-card-back {
   background: var(--olive-dark);
-  border-radius: var(--radius);
+  border-color: rgba(255, 255, 255, 0.16);
   color: white;
-  margin-top: 10px;
-  padding: 22px;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+  transform: rotateY(180deg);
 }
 
-.deadline-card-back h3 {
+.deadline-flip-card:hover .deadline-card-back {
+  transform: rotateY(180deg) translateY(-2px);
+}
+
+.deadline-card-back strong {
   color: white;
-  margin-bottom: 12px;
+  display: block;
+  font-size: 1.18rem;
+  line-height: 1.15;
 }
 
 .deadline-card-back ul {
   display: grid;
   gap: 10px;
   list-style: none;
+  overflow-y: auto;
+  padding-right: 4px;
 }
 
 .deadline-card-back li {
@@ -1085,6 +1121,12 @@ section[id] {
   position: absolute;
   top: 0.7em;
   width: 7px;
+}
+
+.deadline-card-back em {
+  color: var(--brass);
+  font-style: normal;
+  font-weight: 900;
 }
 
 .spaced-top {

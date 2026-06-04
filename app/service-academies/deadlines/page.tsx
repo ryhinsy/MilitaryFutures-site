@@ -1,9 +1,10 @@
 import { AcademiesNav } from "@/components/AcademiesNav";
+import { DeadlineFlipCards, type DeadlineFlipCard } from "@/components/DeadlineFlipCards";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeader } from "@/components/SectionHeader";
 import { academyLinks } from "@/lib/academy-data";
 
-const deadlineCards = [
+const deadlineCards: DeadlineFlipCard[] = [
   {
     academy: "West Point",
     location: "West Point, NY",
@@ -82,28 +83,7 @@ export default function AcademyDeadlinesPage() {
             should track. Treat every date as a planning guide until confirmed
             on the official academy website for the current admissions cycle.
           </SectionHeader>
-          <div className="deadline-card-grid">
-            {deadlineCards.map((card) => (
-              <details className="deadline-flip-card" key={card.academy}>
-                <summary>
-                  <span className="deadline-card-front">
-                    <span className="eyebrow">{card.location}</span>
-                    <strong>{card.academy}</strong>
-                    <span>{card.summary}</span>
-                    <em>Open details</em>
-                  </span>
-                </summary>
-                <div className="deadline-card-back">
-                  <h3>{card.academy} details</h3>
-                  <ul>
-                    {card.details.map((detail) => (
-                      <li key={detail}>{detail}</li>
-                    ))}
-                  </ul>
-                </div>
-              </details>
-            ))}
-          </div>
+          <DeadlineFlipCards cards={deadlineCards} />
           <div className="note-band spaced-top">
             <strong>Deadline reminder</strong>
             Academy deadlines, nomination deadlines, testing policies, and

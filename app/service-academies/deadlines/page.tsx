@@ -7,62 +7,147 @@ import { academyLinks } from "@/lib/academy-data";
 const deadlineCards: DeadlineFlipCard[] = [
   {
     academy: "West Point",
-    location: "West Point, NY",
-    summary: "Pre-candidate steps often begin junior spring; final application is typically due Jan 31.",
-    details: [
-      "Preliminary application: Pre-Candidate Questionnaire usually opens in February of junior year.",
-      "Summer program: Summer Leaders Experience applications are usually open Jan-Mar.",
-      "Nomination requirement: Congressional or other authorized nomination usually required.",
-      "Final application: typically Jan 31; verify annually with West Point Admissions.",
-      "Decisions: appointments usually release Jan-Apr, with final notifications often by May."
+    deadlines: [
+      {
+        title: "Preliminary Application",
+        text: "The Pre-Candidate Questionnaire usually opens in February of junior year."
+      },
+      {
+        title: "Summer Leaders Experience",
+        text: "SLE applications are usually open from January through March."
+      },
+      {
+        title: "Nomination Requirement",
+        text: "A congressional or other authorized nomination is usually required."
+      },
+      {
+        title: "Final Application",
+        text: "The final application deadline is typically January 31. Verify annually with West Point Admissions."
+      },
+      {
+        title: "Appointment Window",
+        text: "Appointments usually release January through April, with final notifications often by May."
+      },
+      {
+        title: "Important Note",
+        text: "A nomination is required for most applicants, but it does not guarantee an appointment."
+      }
     ]
   },
   {
     academy: "Naval Academy",
-    location: "Annapolis, MD",
-    summary: "Preliminary application usually opens in April; final application is typically due Jan 31.",
-    details: [
-      "Preliminary application: usually opens in April of junior year.",
-      "Summer program: Summer Seminar applications are usually open Jan-Mar.",
-      "Nomination requirement: nomination from an official source is usually required.",
-      "Final application: typically Jan 31; verify annually with Naval Academy Admissions.",
-      "Decisions: appointments may release from late fall through April."
+    deadlines: [
+      {
+        title: "Preliminary Application",
+        text: "The preliminary application usually opens in April of junior year."
+      },
+      {
+        title: "Summer Seminar",
+        text: "Summer Seminar applications are usually open from January through March."
+      },
+      {
+        title: "Nomination Requirement",
+        text: "A nomination from an official source is usually required."
+      },
+      {
+        title: "Final Application",
+        text: "The final application deadline is typically January 31. Verify annually with Naval Academy Admissions."
+      },
+      {
+        title: "Appointment Window",
+        text: "Appointments may release from late fall through April."
+      },
+      {
+        title: "Important Note",
+        text: "Students should keep academy, nomination, medical, and backup college plans moving at the same time."
+      }
     ]
   },
   {
     academy: "Air Force Academy",
-    location: "Colorado Springs, CO",
-    summary: "Candidate Kit often opens in July; final application is typically due Dec 31.",
-    details: [
-      "Preliminary application: Pre-Candidate Questionnaire usually opens in March of junior year.",
-      "Summer program: Summer Seminar applications are usually open Dec-Jan.",
-      "Nomination requirement: congressional or other authorized nomination usually required.",
-      "Final application: typically Dec 31; verify annually with Air Force Academy Admissions.",
-      "Decisions: major appointment period is usually Feb-Apr."
+    deadlines: [
+      {
+        title: "Pre-Candidate Questionnaire",
+        text: "The Pre-Candidate Questionnaire usually opens in March of junior year."
+      },
+      {
+        title: "Summer Seminar",
+        text: "Summer Seminar applications are usually open from December through January."
+      },
+      {
+        title: "Nomination Requirement",
+        text: "A congressional or other authorized nomination is usually required."
+      },
+      {
+        title: "Final Application",
+        text: "The final application deadline is typically December 31. Verify annually with Air Force Academy Admissions."
+      },
+      {
+        title: "Appointment Window",
+        text: "The major appointment period is usually February through April."
+      },
+      {
+        title: "Important Note",
+        text: "Eligible candidates usually receive a Candidate Kit around July before senior year."
+      }
     ]
   },
   {
     academy: "Coast Guard Academy",
-    location: "New London, CT",
-    summary: "No congressional nomination required; Early Action is Oct 15 and Regular Admission is usually Feb 2.",
-    details: [
-      "Preliminary application: students apply directly through the Coast Guard Academy process.",
-      "Summer program: admissions programs and visits may vary; verify current opportunities.",
-      "Nomination requirement: congressional nominations are not required or considered.",
-      "Final application: Early Action is listed as Oct 15; Regular Admission for U.S. citizens is usually Feb 2.",
-      "Decisions: Early Action decisions are usually in December; Regular Admission decisions are usually in March."
+    deadlines: [
+      {
+        title: "Direct Application",
+        text: "Students apply directly through the Coast Guard Academy admissions process."
+      },
+      {
+        title: "Admissions Programs",
+        text: "Admissions programs and visit opportunities may vary. Verify current options on the official admissions site."
+      },
+      {
+        title: "Nomination Requirement",
+        text: "Congressional nominations are not required or considered."
+      },
+      {
+        title: "Final Application",
+        text: "Early Action is listed as October 15. Regular Admission for U.S. citizens is usually February 2."
+      },
+      {
+        title: "Decision Window",
+        text: "Early Action decisions are usually in December. Regular Admission decisions are usually in March."
+      },
+      {
+        title: "Important Note",
+        text: "Coast Guard Academy is the major federal service academy exception for congressional nominations."
+      }
     ]
   },
   {
     academy: "Merchant Marine Academy",
-    location: "Kings Point, NY",
-    summary: "Application usually opens junior spring; final application is typically around Feb 1.",
-    details: [
-      "Preliminary application: application usually opens in spring of junior year.",
-      "Summer program: verify current visit and outreach opportunities through USMMA Admissions.",
-      "Nomination requirement: congressional nomination is generally required, with USMMA-specific rules.",
-      "Final application: typically around Feb 1; nomination receipt deadlines may also apply.",
-      "Decisions: appointments often release during winter and spring, commonly Feb-Apr."
+    deadlines: [
+      {
+        title: "Application Opens",
+        text: "The application usually opens in spring of junior year."
+      },
+      {
+        title: "Visit Opportunities",
+        text: "Verify current visit, outreach, and admissions event opportunities through USMMA Admissions."
+      },
+      {
+        title: "Nomination Requirement",
+        text: "A congressional nomination is generally required, with USMMA-specific rules."
+      },
+      {
+        title: "Final Application",
+        text: "The final application is typically around February 1. Nomination receipt deadlines may also apply."
+      },
+      {
+        title: "Appointment Window",
+        text: "Appointments often release during winter and spring, commonly February through April."
+      },
+      {
+        title: "Important Note",
+        text: "USMMA nomination rules differ from several other academies, so students should verify current requirements carefully."
+      }
     ]
   }
 ];

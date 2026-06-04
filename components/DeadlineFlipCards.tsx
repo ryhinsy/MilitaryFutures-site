@@ -1,13 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import type { KeyboardEvent } from "react";
+
+export type DeadlineItem = {
+  title: string;
+  text: string;
+};
 
 export type DeadlineFlipCard = {
   academy: string;
-  location: string;
-  summary: string;
-  details: string[];
+  deadlines: DeadlineItem[];
 };
 
 type DeadlineFlipCardsProps = {
@@ -16,6 +18,7 @@ type DeadlineFlipCardsProps = {
 
 export function DeadlineFlipCards({ cards }: DeadlineFlipCardsProps) {
   const [flippedCards, setFlippedCards] = useState<Record<string, boolean>>({});
+  const [activeDeadlines, setActiveDeadlines] = useState<Record<string, number>>({});
 
   function toggleCard(academy: string) {
     setFlippedCards((current) => ({
@@ -24,47 +27,70 @@ export function DeadlineFlipCards({ cards }: DeadlineFlipCardsProps) {
     }));
   }
 
-  function handleKeyDown(event: KeyboardEvent<HTMLDivElement>, academy: string) {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      toggleCard(academy);
-    }
+  function changeDeadline(academy: string, direction: "next" | "previous", total: number) {
+    setActiveDeadlines((current) => {
+      const activeIndex = current[academy] ?? 0;
+      const nextIndex =
+        direction === "next"
+          ? (activeIndex + 1) % total
+          : (activeIndex - 1 + total) % total;
+
+      return {
+        ...current,
+        [academy]: nextIndex
+      };
+    });
   }
 
   return (
     <div className="deadline-card-grid">
       {cards.map((card) => {
         const isFlipped = Boolean(flippedCards[card.academy]);
+        const activeIndex = activeDeadlines[card.academy] ?? 0;
+        const activeDeadline = card.deadlines[activeIndex];
 
         return (
-          <div
-            aria-label={`${isFlipped ? "Show summary for" : "View deadlines for"} ${card.academy}`}
-            aria-pressed={isFlipped}
-            className={`deadline-flip-card${isFlipped ? " is-flipped" : ""}`}
-            key={card.academy}
-            onClick={() => toggleCard(card.academy)}
-            onKeyDown={(event) => handleKeyDown(event, card.academy)}
-            role="button"
-            tabIndex={0}
-          >
+          <div className={`deadline-flip-card${isFlipped ? " is-flipped" : ""}`} key={card.academy}>
             <div className="deadline-card-inner">
-              <div className="deadline-card-face deadline-card-front">
-                <span className="eyebrow">{card.location}</span>
+              <button
+                aria-label={`View deadlines for ${card.academy}`}
+                className="deadline-card-face deadline-card-front"
+                onClick={() => toggleCard(card.academy)}
+                type="button"
+              >
                 <strong>{card.academy}</strong>
-                <span>{card.summary}</span>
-                <em>View deadlines</em>
-              </div>
+                <em>Click to view deadlines</em>
+              </button>
               <div className="deadline-card-face deadline-card-back">
                 <div>
-                  <span className="eyebrow">Deadline details</span>
+                  <span className="eyebrow">
+                    {activeIndex + 1} of {card.deadlines.length}
+                  </span>
                   <strong>{card.academy}</strong>
                 </div>
-                <ul>
-                  {card.details.map((detail) => (
-                    <li key={detail}>{detail}</li>
-                  ))}
-                </ul>
-                <em>Click to flip back</em>
+                <div className="deadline-carousel-item">
+                  <h3>{activeDeadline.title}</h3>
+                  <p>{activeDeadline.text}</p>
+                </div>
+                <div className="deadline-card-controls">
+                  <button
+                    aria-label={`Previous deadline for ${card.academy}`}
+                    onClick={() => changeDeadline(card.academy, "previous", card.deadlines.length)}
+                    type="button"
+                  >
+                    Prev
+                  </button>
+                  <button onClick={() => toggleCard(card.academy)} type="button">
+                    Back to academy
+                  </button>
+                  <button
+                    aria-label={`Next deadline for ${card.academy}`}
+                    onClick={() => changeDeadline(card.academy, "next", card.deadlines.length)}
+                    type="button"
+                  >
+                    Next
+                  </button>
+                </div>
               </div>
             </div>
           </div>

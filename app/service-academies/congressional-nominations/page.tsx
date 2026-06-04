@@ -18,10 +18,20 @@ export default function AcademyNominationsPage() {
         <div className="container">
           <SectionHeader title="Nomination Sources" />
           <div className="note-band stack-title">
-            <strong>Important exception:</strong>
-            The U.S. Coast Guard Academy does not require a congressional
-            nomination. Students apply directly through the Coast Guard Academy
-            admissions process.
+            <strong>Important Coast Guard Academy Exception</strong>
+            <p>
+              Most federal service academies require a congressional nomination
+              as part of the admissions process.
+            </p>
+            <p>
+              The U.S. Coast Guard Academy is the major exception. Students
+              apply directly through the Coast Guard Academy admissions process
+              and do not need a congressional nomination.
+            </p>
+            <p>
+              Always verify current requirements through official academy
+              admissions websites because policies and procedures can change.
+            </p>
           </div>
           <div className="content-grid">
             <ContentCard title="Your U.S. Senators" kicker="Statewide sources">

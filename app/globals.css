@@ -1026,7 +1026,8 @@ section[id] {
 .deadline-card-grid {
   display: grid;
   gap: 32px;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: minmax(0, 760px);
+  justify-content: center;
 }
 
 .deadline-flip-card {
@@ -1171,6 +1172,17 @@ section[id] {
   background: var(--brass);
   color: var(--olive-dark);
   outline: none;
+}
+
+.deadline-card-controls button:disabled {
+  cursor: not-allowed;
+  opacity: 0.42;
+}
+
+.deadline-card-controls button:disabled:hover,
+.deadline-card-controls button:disabled:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
 }
 
 

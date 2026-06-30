@@ -1,5 +1,4 @@
 import { ComparisonTable } from "@/components/ComparisonTable";
-import { ContentCard } from "@/components/ContentCard";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeader } from "@/components/SectionHeader";
 
@@ -19,31 +18,50 @@ export default function ComparePage() {
             college, a civilian campus with officer training, immediate job
             training, part-time service, or full-time active duty life.
           </SectionHeader>
-          <div className="content-grid">
-            <ContentCard title="Service Academies" kicker="College + officer path">
-              Highly structured federal colleges designed to commission
-              officers after graduation.
-            </ContentCard>
-            <ContentCard title="ROTC" kicker="Civilian campus + officer path">
-              Students attend a civilian college while adding military classes,
-              labs, physical training, and summer requirements.
-            </ContentCard>
-            <ContentCard title="Enlisting" kicker="Job training first">
-              Students enter a branch, complete initial training, learn a job
-              specialty, and begin serving in an enlisted role.
-            </ContentCard>
-            <ContentCard title="National Guard" kicker="State + federal">
-              Members often serve part time while balancing school or work, with
-              possible state activation or federal mobilization.
-            </ContentCard>
-            <ContentCard title="Reserves" kicker="Federal part-time">
-              Reserve members usually serve part time in a federal reserve
-              component and can be mobilized for training or operational needs.
-            </ContentCard>
-            <ContentCard title="Active Duty" kicker="Full-time service">
-              Active Duty means the military is the full-time job after
-              training, with daily life shaped by branch, job, and assignment.
-            </ContentCard>
+          <div className="guide-columns three">
+            <div>
+              <h3>Service Academies</h3>
+              <p>
+                Highly structured federal colleges designed to commission
+                officers after graduation.
+              </p>
+            </div>
+            <div>
+              <h3>ROTC</h3>
+              <p>
+                Students attend a civilian college while adding military
+                classes, labs, physical training, and summer requirements.
+              </p>
+            </div>
+            <div>
+              <h3>Enlisting</h3>
+              <p>
+                Students enter a branch, complete initial training, learn a job
+                specialty, and begin serving in an enlisted role.
+              </p>
+            </div>
+            <div>
+              <h3>National Guard</h3>
+              <p>
+                Members often serve part time while balancing school or work,
+                with possible state activation or federal mobilization.
+              </p>
+            </div>
+            <div>
+              <h3>Reserves</h3>
+              <p>
+                Reserve members usually serve part time in a federal reserve
+                component and can be mobilized for training or operational
+                needs.
+              </p>
+            </div>
+            <div>
+              <h3>Active Duty</h3>
+              <p>
+                Active Duty means the military is the full-time job after
+                training, with daily life shaped by branch, job, and assignment.
+              </p>
+            </div>
           </div>
           <div className="note-band spaced-top">
             <strong>Commissioning reminder</strong>

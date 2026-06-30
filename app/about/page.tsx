@@ -1,4 +1,3 @@
-import { ContentCard } from "@/components/ContentCard";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeader } from "@/components/SectionHeader";
 
@@ -17,20 +16,26 @@ export default function AboutPage() {
             to understand. It is not an official military, academy, ROTC, or
             government website.
           </SectionHeader>
-          <div className="content-grid two">
-            <ContentCard title="What This Site Does">
-              Military Futures organizes general information about Service
-              Academies, ROTC, enlistment, Guard and Reserve options,
-              nominations, timelines, and planning questions so students can
-              compare pathways more clearly.
-            </ContentCard>
-            <ContentCard title="What This Site Does Not Do">
-              Military Futures does not provide official admissions decisions,
-              recruiting guidance, legal advice, financial advice, medical
-              qualification guidance, or binding information about military
-              benefits or obligations.
-            </ContentCard>
-          </div>
+          <article className="guide-article">
+            <div className="guide-block">
+              <h3>What This Site Does</h3>
+              <p>
+                Military Futures organizes general information about Service
+                Academies, ROTC, enlistment, Guard and Reserve options,
+                nominations, timelines, and planning questions so students can
+                compare pathways more clearly.
+              </p>
+            </div>
+            <div className="guide-block">
+              <h3>What This Site Does Not Do</h3>
+              <p>
+                Military Futures does not provide official admissions decisions,
+                recruiting guidance, legal advice, financial advice, medical
+                qualification guidance, or binding information about military
+                benefits or obligations.
+              </p>
+            </div>
+          </article>
           <div className="disclaimer-panel spaced-top">
             <strong>Disclaimer</strong>
             <p>

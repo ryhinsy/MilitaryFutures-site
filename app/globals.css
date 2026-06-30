@@ -710,46 +710,45 @@ h3 {
 
 .card-grid {
   display: grid;
-  gap: 18px;
+  gap: 30px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .info-card,
 .route-card,
 .page-card {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 22px;
+  padding: 0;
 }
 
 .info-card {
-  min-height: 188px;
+  display: grid;
+  gap: 10px;
 }
 
 .info-card .icon {
   align-items: center;
-  background: var(--surface-muted);
-  border-radius: 8px;
+  border-bottom: 2px solid var(--brass);
   color: var(--olive);
   display: inline-flex;
+  font-size: 0.86rem;
   font-weight: 900;
-  height: 42px;
+  height: 28px;
   justify-content: center;
-  margin-bottom: 18px;
-  width: 42px;
+  width: max-content;
 }
 
 .route-grid {
   display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 34px;
+  row-gap: 30px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .route-card {
   display: grid;
-  gap: 12px;
-  min-height: 180px;
+  gap: 10px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
 }
 
 .route-card span {
@@ -819,7 +818,7 @@ section[id] {
 
 .content-grid {
   display: grid;
-  gap: 18px;
+  gap: 30px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
@@ -829,7 +828,7 @@ section[id] {
 
 .guide-article {
   display: grid;
-  gap: 28px;
+  gap: 34px;
   max-width: 860px;
 }
 
@@ -840,6 +839,7 @@ section[id] {
 .guide-block {
   display: grid;
   gap: 12px;
+  padding-top: 4px;
 }
 
 .guide-block h3 {
@@ -880,13 +880,21 @@ section[id] {
 
 .guide-columns {
   display: grid;
-  gap: 28px;
+  column-gap: 46px;
+  row-gap: 32px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.guide-columns.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .guide-columns > div {
   display: grid;
   gap: 12px;
+  align-content: start;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
 }
 
 .guide-columns h3 {
@@ -894,12 +902,10 @@ section[id] {
 }
 
 .content-card {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
   display: grid;
   gap: 12px;
-  padding: 24px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
 }
 
 .card-kicker {
@@ -949,10 +955,8 @@ section[id] {
 }
 
 .checklist {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 24px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
 }
 
 .checklist h3 {
@@ -1004,16 +1008,37 @@ section[id] {
 
 .timeline {
   display: grid;
-  gap: 14px;
+  gap: 0;
   list-style: none;
+  max-width: 880px;
 }
 
 .timeline li {
+  border-left: 3px solid var(--sage);
+  display: grid;
+  gap: 8px;
+  padding: 0 0 30px 24px;
+  position: relative;
+}
+
+.timeline li::before {
+  background: var(--background);
+  border: 3px solid var(--sage);
+  border-radius: 999px;
+  content: "";
+  height: 13px;
+  left: -8px;
+  position: absolute;
+  top: 2px;
+  width: 13px;
+}
+
+.section.alt .timeline li::before {
   background: var(--surface);
-  border: 1px solid var(--line);
-  border-left: 5px solid var(--sage);
-  border-radius: var(--radius);
-  padding: 20px;
+}
+
+.timeline li:last-child {
+  padding-bottom: 0;
 }
 
 .timeline span {
@@ -1027,8 +1052,7 @@ section[id] {
 
 .note-band {
   background: var(--sky);
-  border: 1px solid #c5d7e1;
-  border-radius: var(--radius);
+  border-left: 5px solid #7fa6b8;
   padding: 24px;
 }
 
@@ -1039,13 +1063,10 @@ section[id] {
 }
 
 .link-panel {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  padding: 18px;
+  padding-top: 4px;
 }
 
 .link-panel a {
@@ -1341,8 +1362,7 @@ section[id] {
 .disclaimer-panel,
 .result-disclaimer {
   background: var(--surface-muted);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border-left: 5px solid var(--brass);
   padding: 14px;
 }
 
@@ -1379,6 +1399,7 @@ section[id] {
 
   .page-grid,
   .guide-columns,
+  .guide-columns.three,
   .quiz-shell {
     grid-template-columns: 1fr;
   }

@@ -7,13 +7,13 @@ import { academyDetails } from "@/lib/academy-data";
 export default function AfterGraduationPage() {
   return (
     <>
+      <AcademiesNav active="after-graduation" />
+
       <PageHero eyebrow="Academies" title="After Graduation">
         Academy graduation is usually the start of an officer career. Graduates
         move from student life into leading people, learning a specialty, and
         serving in their branch.
       </PageHero>
-
-      <AcademiesNav active="after-graduation" />
 
       <section className="section">
         <div className="container">

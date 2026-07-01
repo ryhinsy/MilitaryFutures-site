@@ -194,12 +194,13 @@ const summerPrograms = [
 export default function AcademyDeadlinesPage() {
   return (
     <>
+      <AcademiesNav active="deadlines" />
+
       <PageHero eyebrow="Academies" title="Deadlines">
         Quickly scan academy application windows, nomination requirements, final
         deadlines, and appointment timing. Dates can change, so verify official
         sources annually.
       </PageHero>
-      <AcademiesNav active="deadlines" />
       <section className="section">
         <div className="container">
           <SectionHeader eyebrow="Flip cards" title="Academy Deadlines at a Glance">

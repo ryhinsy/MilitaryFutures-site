@@ -6,12 +6,13 @@ import { Timeline } from "@/components/Timeline";
 export default function AcademyNominationsPage() {
   return (
     <>
+      <AcademiesNav active="congressional-nominations" />
+
       <PageHero eyebrow="Academies" title="Congressional Nominations">
         Most Service Academies require a nomination, but the Coast Guard Academy
         does not require a congressional nomination. A nomination is not the
         same as an appointment.
       </PageHero>
-      <AcademiesNav active="congressional-nominations" />
       <section className="section">
         <div className="container">
           <SectionHeader title="Nomination Sources" />

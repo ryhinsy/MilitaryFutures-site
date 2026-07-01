@@ -5,6 +5,8 @@ import { SectionHeader } from "@/components/SectionHeader";
 export default function ServiceAcademiesPage() {
   return (
     <>
+      <AcademiesNav active="overview" />
+
       <PageHero eyebrow="College + commissioning" title="Service Academies">
         The United States Service Academies are among the most prestigious
         colleges and universities in the country. They include the United States
@@ -18,8 +20,6 @@ export default function ServiceAcademiesPage() {
         in serving in the military while earning a college degree and developing
         as a leader, a service academy may be the right path for you.
       </PageHero>
-
-      <AcademiesNav active="overview" />
 
       <section className="section">
         <div className="container">

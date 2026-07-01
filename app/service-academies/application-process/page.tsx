@@ -5,12 +5,13 @@ import { SectionHeader } from "@/components/SectionHeader";
 export default function AcademyApplicationProcessPage() {
   return (
     <>
+      <AcademiesNav active="application-process" />
+
       <PageHero eyebrow="Academies" title="Application Process">
         The academy process is a yearlong project with admissions, fitness,
         medical, recommendations, interviews, nominations, and backup plans
         moving at the same time.
       </PageHero>
-      <AcademiesNav active="application-process" />
       <section className="section">
         <div className="container">
           <SectionHeader eyebrow="Steps" title="The Academy Admissions Journey" />

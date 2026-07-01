@@ -6,9 +6,17 @@ export default function ServiceAcademiesPage() {
   return (
     <>
       <PageHero eyebrow="College + commissioning" title="Service Academies">
-        Service Academies are highly selective federal colleges where students
-        earn a degree, receive military leadership training, and usually
-        commission as officers after graduation.
+        The United States Service Academies are among the most prestigious
+        colleges and universities in the country. They include the United States
+        Military Academy (West Point), the United States Naval Academy, the
+        United States Air Force Academy, the United States Merchant Marine
+        Academy, and the United States Coast Guard Academy. Admission is highly
+        competitive, with acceptance rates often around 10&ndash;20% depending on
+        the academy and admissions cycle. Students receive a world-class
+        education, military leadership training, and commission as officers upon
+        graduation in exchange for a service commitment. If you are interested
+        in serving in the military while earning a college degree and developing
+        as a leader, a service academy may be the right path for you.
       </PageHero>
 
       <AcademiesNav active="overview" />

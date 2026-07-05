@@ -52,6 +52,8 @@ export default function AcademyApplicationProcessPage() {
                 Academy. The Coast Guard Academy does not require a
                 congressional nomination.
               </p>
+            </div>
+            <div className="guide-block">
               <h3>What is a Congressional Nomination?</h3>
               <p>
                 A congressional nomination is a recommendation from a U.S.

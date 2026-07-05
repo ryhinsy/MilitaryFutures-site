@@ -80,6 +80,36 @@ export default function AcademyApplicationProcessPage() {
                 admissions cycle, so students should verify current rules every
                 year.
               </p>
+              <div className="resource-group">
+                <h4>Official Nomination Resources</h4>
+                <p>
+                  Use the official resources below to learn about nomination
+                  requirements and application procedures.
+                </p>
+                <div className="link-panel" aria-label="Official nomination resources">
+                  <a
+                    href="https://www.house.gov/representatives/find-your-representative"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    U.S. House representative lookup
+                  </a>
+                  <a
+                    href="https://www.senate.gov/states/statesmap.htm"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    U.S. Senate state lookup
+                  </a>
+                  <a
+                    href="https://www.whitehouse.gov/service-academy-nominations/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Vice Presidential nomination information
+                  </a>
+                </div>
+              </div>
             </div>
             <div className="guide-block">
               <h3>Complete fitness, medical, and nomination steps</h3>
@@ -107,28 +137,7 @@ export default function AcademyApplicationProcessPage() {
               recommendations, and backup plans.
             </div>
           </article>
-          <div className="link-panel spaced-top" aria-label="Official nomination lookup links">
-            <a
-              href="https://www.house.gov/representatives/find-your-representative"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              U.S. House representative lookup
-            </a>
-            <a
-              href="https://www.senate.gov/states/statesmap.htm"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              U.S. Senate state lookup
-            </a>
-            <a
-              href="https://www.whitehouse.gov/service-academy-nominations/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Vice Presidential nomination information
-            </a>
+          <div className="link-panel spaced-top" aria-label="Official academy nomination links">
             <a
               href="https://www.westpoint.edu/admissions/steps-to-admission"
               rel="noopener noreferrer"

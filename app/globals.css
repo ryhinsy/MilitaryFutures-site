@@ -954,6 +954,18 @@ section[id] {
   text-underline-offset: 3px;
 }
 
+.resource-group {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.resource-group h4 {
+  color: var(--olive-dark);
+  font-size: 1rem;
+  margin: 0;
+}
+
 .checklist {
   border-top: 1px solid var(--line);
   padding-top: 18px;

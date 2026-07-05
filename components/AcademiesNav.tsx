@@ -7,11 +7,6 @@ const academyNavItems = [
     label: "Application Process",
     key: "application-process"
   },
-  {
-    href: "/service-academies/congressional-nominations",
-    label: "Congressional Nominations",
-    key: "congressional-nominations"
-  },
   { href: "/service-academies/deadlines", label: "Deadlines", key: "deadlines" },
   {
     href: "/service-academies/after-graduation",

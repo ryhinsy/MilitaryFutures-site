@@ -7,16 +7,20 @@ const academyNavItems = [
     label: "Application Process",
     key: "application-process"
   },
-  { href: "/service-academies/deadlines", label: "Deadlines", key: "deadlines" },
+  {
+    href: "/service-academies/optional-programs",
+    label: "Optional Programs",
+    key: "optional-programs"
+  },
   {
     href: "/service-academies/after-graduation",
     label: "After Graduation",
     key: "after-graduation"
   },
   {
-    href: "/service-academies/optional-programs",
-    label: "Optional Programs",
-    key: "optional-programs"
+    href: "/service-academies/resources",
+    label: "Resources",
+    key: "resources"
   }
 ];
 

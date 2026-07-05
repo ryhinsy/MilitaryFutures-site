@@ -33,6 +33,32 @@ export default function ServiceAcademiesPage() {
               </p>
             </div>
             <div className="guide-block">
+              <h3>What does military life look like at the academies?</h3>
+              <p>
+                Service academy students are not only full-time college
+                students. In addition to working toward a degree, they are
+                expected to learn and practice military culture, customs,
+                standards, leadership, discipline, and professional expectations
+                every day.
+              </p>
+              <p>
+                Students also complete additional required training and
+                coursework beyond a typical college schedule. This may include
+                military studies, physical education, leadership development,
+                inspections, formations, fitness requirements, and other
+                academy-specific training. These requirements are part of the
+                academy experience and may count toward the student&apos;s academic
+                or military development program.
+              </p>
+              <p>
+                One major benefit of attending a service academy is that
+                tuition, room, and board are generally fully funded in exchange
+                for a service commitment after graduation. Students should still
+                verify current details with each academy because benefits, fees,
+                and obligations can vary or change.
+              </p>
+            </div>
+            <div className="guide-block">
               <h3>Academics</h3>
               <p>
                 Students apply to a full undergraduate program and should

@@ -61,27 +61,18 @@ export default function AcademyApplicationProcessPage() {
                 required for most federal service academies, except the Coast
                 Guard Academy.
               </p>
-            </div>
-            <div className="guide-block">
-              <h3>Students can usually pursue more than one source</h3>
               <p>
                 A typical applicant may apply to both U.S. senators, their U.S.
                 representative, the Vice President, and any service-connected
                 source for which they are eligible. Applying broadly can help,
                 but every office has its own process.
               </p>
-            </div>
-            <div className="guide-block">
-              <h3>Common nomination sources</h3>
               <ul className="guide-list">
                 <li>U.S. senators from the student&apos;s home state.</li>
                 <li>The U.S. representative for the student&apos;s congressional district.</li>
                 <li>The Vice President nomination process.</li>
                 <li>Service-connected categories when a student is eligible.</li>
               </ul>
-            </div>
-            <div className="guide-block">
-              <h3>Rules vary by office and year</h3>
               <p>
                 Each nominating office sets its own deadline, forms, essays,
                 recommendation rules, interview process, and academy preference

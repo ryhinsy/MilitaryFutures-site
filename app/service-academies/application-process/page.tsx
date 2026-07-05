@@ -67,12 +67,6 @@ export default function AcademyApplicationProcessPage() {
                 source for which they are eligible. Applying broadly can help,
                 but every office has its own process.
               </p>
-              <ul className="guide-list">
-                <li>U.S. senators from the student&apos;s home state.</li>
-                <li>The U.S. representative for the student&apos;s congressional district.</li>
-                <li>The Vice President nomination process.</li>
-                <li>Service-connected categories when a student is eligible.</li>
-              </ul>
               <p>
                 Each nominating office sets its own deadline, forms, essays,
                 recommendation rules, interview process, and academy preference

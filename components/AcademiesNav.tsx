@@ -12,6 +12,11 @@ const academyNavItems = [
     href: "/service-academies/after-graduation",
     label: "After Graduation",
     key: "after-graduation"
+  },
+  {
+    href: "/service-academies/optional-programs",
+    label: "Optional Programs",
+    key: "optional-programs"
   }
 ];
 
